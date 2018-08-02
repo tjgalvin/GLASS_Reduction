@@ -47,10 +47,10 @@ logger.log(logging.INFO, uvsplit)
 
 mu.calibrator_pgflag(primary)
 
-mfcal = m(f"mfcal vis={primary} refant=4 interval=0.1 options=xyvary").run()
+mfcal = m(f"mfcal vis={primary} refant=4 interval=0.1").run()
 logger.log(logging.INFO, mfcal)
 
-gpcal = m(f"gpcal vis={primary} refant=4 interval=0.1 nfbin={NFBIN}").run()
+gpcal = m(f"gpcal vis={primary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary").run()
 logger.log(logging.INFO, gpcal)
 
 mu.calibrator_pgflag(primary)
