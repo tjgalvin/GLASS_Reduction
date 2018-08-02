@@ -23,11 +23,9 @@ mirstr = pymir.mirstr
 
 primary = '1934-638'
 secondary = '0327-241'
-science = 'c3171'
 
-chan_ref_7 = 6676 
-flags_7 = {'chan_start':[7866-chan_ref_7, 8058-chan_ref_7, 8177-chan_ref_7, 7747-chan_ref_7, 1058, 670, 851, 788],
-           'chan_end'  :[7896-chan_ref_7, 8088-chan_ref_7, 8207-chan_ref_7, 7777-chan_ref_7, 1065, 680, 857, 810]}
+flags_5 = {'chan_start':[None],
+           'chan_end'  :[None]}
 
 flags_9 = {'chan_start':[850],
            'chan_end'  :[900]}
