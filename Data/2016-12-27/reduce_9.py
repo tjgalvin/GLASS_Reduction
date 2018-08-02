@@ -27,7 +27,8 @@ FREQ = 9500
 
 primary = f'1934-638.{FREQ}'
 secondary = f'2245-328.{FREQ}'
-mosaic = f"d.{FREQ}"
+secondary = f'2312-319.{FREQ}'
+mosaic_names = [f"d.{FREQ}", f"g23d.{FREQ}"]
 
 # Load in files assuming the setup file/s have been renamed or deleted
 files = glob('raw/*C3132')
@@ -91,13 +92,18 @@ result = pool.map(run, plt)
 pool.close()
 pool.join()
 
-gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
-logger.log(logging.INFO, gpcopy)
+if isinstance(mosaic_names, str):
+    mosaic_names = [mosaic_names]
 
-mu.mosaic_pgflag(mosaic)
+for mosaic in mosaic_names:
 
-uvsplit = m(f"uvsplit vis={mosaic}").run()
-logger.log(logging.INFO, uvsplit)
+    gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
+    logger.log(logging.INFO, gpcopy)
+
+    mu.mosaic_pgflag(mosaic)
+
+    uvsplit = m(f"uvsplit vis={mosaic}").run()
+    logger.log(logging.INFO, uvsplit)
 
 
 # -----------------------------------------------------
