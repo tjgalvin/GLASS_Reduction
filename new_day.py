@@ -15,7 +15,15 @@ def add_reference_scripts(dest: str):
     Arguments:
         dest {str} -- Path to a day of data
     """
-    pass
+    print(f'Copying reference scripts to {dest}')
+    print('\treduce_5.py')
+    su.copyfile('../../reduce_5.py', f'{dest}/reduce_5.py')
+    
+    print('\treduce_9.py')
+    su.copyfile('../../reduce_9.py', f'{dest}/reduce_9.py')
+    
+    print('Linking to mir_utils.py')
+    os.symlink('../../mir_utils.py', f'{dest}/mir_utils.py')
 
 
 def process_files(files: list):
@@ -29,7 +37,8 @@ def process_files(files: list):
     
     # Get folder name
     date = files[0].split('_')[0]
-    path = f'./{date}/raw'
+    date_path = f'../{date}'
+    path = f'{date_path}/raw'
 
     if not os.path.exists(path):
         os.makedirs(path)
@@ -40,15 +49,17 @@ def process_files(files: list):
     for f in files:
         dest = f"{path}/{f}"
 
-        # User added new junk name
+        # User added new junk name. Consider spliting based on 
+        # str length. RPFITS have 21 characters
         if f.count('_') > 1:
             f = '_'.join(f.split('_')[:2])
-            print('\t',f)
-
+            
         # Move into place
         print(f"Moving {f} to {dest}")
         su.move(f, dest)
 
+    # Copy across required daily scripts
+    add_reference_scripts(date_path)
 
 
 if __name__ == '__main__':
