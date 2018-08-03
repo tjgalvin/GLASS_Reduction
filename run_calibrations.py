@@ -32,8 +32,8 @@ else:
 jobs = []
 
 for day in days:
-    a =[("python3 reduce_5.py", day),
-        ("python3 reduce_5.py", day)
+    a =[#("python3 reduce_5.py", day),
+        ("python3 reduce_9.py", day)
         ]
     jobs.extend(a)
 
