@@ -49,10 +49,7 @@ def process_files(files: list):
     for f in files:
         dest = f"{path}/{f}"
 
-        # User added new junk name. Consider spliting based on 
-        # str length. RPFITS have 21 characters
-        # if f.count('_') > 1:
-        #     f = '_'.join(f.split('_')[:2])
+        # User added new junk name.
         if len(f) > 21:
             f = f[:21]
 
