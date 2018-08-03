@@ -51,9 +51,11 @@ def process_files(files: list):
 
         # User added new junk name. Consider spliting based on 
         # str length. RPFITS have 21 characters
-        if f.count('_') > 1:
-            f = '_'.join(f.split('_')[:2])
-            
+        # if f.count('_') > 1:
+        #     f = '_'.join(f.split('_')[:2])
+        if len(f) > 21:
+            f = f[:21]
+
         # Move into place
         print(f"Moving {f} to {dest}")
         su.move(f, dest)
