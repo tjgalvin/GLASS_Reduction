@@ -26,7 +26,7 @@ NFBIN = 2
 FREQ = 5500
 
 primary = f'1934-638.{FREQ}'
-secondary = f'2245-328.{FREQ}'
+secondary = f'2312-319.{FREQ}'
 mosaic = f"d.{FREQ}"
 
 # Load in files assuming the setup file/s have been renamed or deleted
