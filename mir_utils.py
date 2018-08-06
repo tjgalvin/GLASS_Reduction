@@ -2,14 +2,8 @@
 """
 from glob import glob
 import subprocess as sp
-from scipy.optimize import curve_fit
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 import pymir as pymir
 from pymir import mirstr as m
-from astropy.time import Time
-import astropy.units as u
 import os
 import sys
 import shutil as su
