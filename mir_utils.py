@@ -19,9 +19,14 @@ mirstr = pymir.mirstr
 primary = '1934-638'
 secondary = '0327-241'
 
-flags_5 = {'chan_start':[None],
-           'chan_end'  :[None]}
+# flags_5 = {'chan_start':[None],
+#            'chan_end'  :[None]}
 
+ref_5 = 4476
+flags_5 = {'chan_start':[5622-ref_5, 5930-ref_5, 6440-ref_5],
+           'chan_end'  :[5628-ref_5, 5960-ref_5, 6480-ref_5]}
+
+ref_9 = 8476
 flags_9 = {'chan_start':[850],
            'chan_end'  :[900]}
 
@@ -51,10 +56,8 @@ def uvflag(vis, flag_def):
     Raises:
         ValueError -- Raised if the `chan_start` and `chan_end` do not have same length
     """
-
-    return
     if len(flag_def['chan_start']) != len(flag_def['chan_end']):
-        raise ValueError('Chanels star and end should have the same length')
+        raise ValueError('Channels start and end should have the same length')
         
     for start, end in zip(flag_def['chan_start'], flag_def['chan_end']):
         line = f"chan,{end-start},{start},1"
