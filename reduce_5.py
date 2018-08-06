@@ -25,10 +25,6 @@ def run(a):
 NFBIN = 2
 FREQ = 5500
 
-primary = f'1934-638.{FREQ}'
-secondary = f'2245-328.{FREQ}'
-mosaic = f"d.{FREQ}"
-
 # Load in files assuming the setup file/s have been renamed or deleted
 files = glob('raw/*C3132')
 
@@ -44,6 +40,10 @@ mu.uvflag(atlod.out, mu.flags_5)
 
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
+
+# Deduce the objects in the observing run
+srcs = mu.derive_obs_sources(uvsplit, FREQ)
+primary, secondary, mosaic_targets = srcs
 
 mu.calibrator_pgflag(primary)
 
@@ -91,48 +91,17 @@ result = pool.map(run, plt)
 pool.close()
 pool.join()
 
-gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
-logger.log(logging.INFO, gpcopy)
+for mosaic in mosaic_targets:
 
-mu.mosaic_pgflag(mosaic)
+    gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
+    logger.log(logging.INFO, gpcopy)
 
-uvsplit = m(f"uvsplit vis={mosaic}").run()
-logger.log(logging.INFO, uvsplit)
+    mu.mosaic_pgflag(mosaic)
 
+    uvsplit = m(f"uvsplit vis={mosaic}").run()
+    logger.log(logging.INFO, uvsplit)
 
-# -----------------------------------------------------
 # Move items into a consistent structure
-# -----------------------------------------------------
-
-if not os.path.exists('Plots'):
-    # Potential race conditions
-    try:
-        os.makedirs('Plots')
-    except:
-        pass
-    
-for f in glob(f'*{FREQ}.png') + glob(f'*{FREQ}_log.txt'):
-    su.move(f, 'Plots')
-
-
-if not os.path.exists(f'f{FREQ}'):
-    # Potential race conditions
-    try:
-        os.makedirs(f'f{FREQ}')
-    except:
-        pass
-    
-for f in glob(f'*.{FREQ}'):
-    su.move(f, f'f{FREQ}')
-
-
-if not os.path.exists('uv'):
-    # Potential race conditions
-    try:
-        os.makedirs('uv')
-    except:
-        pass
-
-su.move('data5.uv', 'uv')
+mu.mv_uv(FREQ)
 
 
