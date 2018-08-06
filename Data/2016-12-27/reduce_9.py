@@ -41,7 +41,7 @@ atlod = m(f"atlod in={','.join(files)} out=data9.uv ifsel=2 options=birdie,rfifl
 logger.log(logging.INFO, atlod)
 
 # Flag out known bad channels
-mu.uvflag(atlod.out, mu.flags_5)
+mu.uvflag(atlod.out, mu.flags_9)
 
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
