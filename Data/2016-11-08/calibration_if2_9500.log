@@ -1,4 +1,4 @@
-2018-08-03 03:27:28,710 [MainThread  ] [INFO ]  atlod in=raw/2016-11-08_0333.C3132,raw/2016-11-08_0621.C3132,raw/2016-11-08_0907.C3132,raw/2016-11-08_1154.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
+2018-08-06 10:22:32,496 [MainThread  ] [INFO ]  atlod in=raw/2016-11-08_0333.C3132,raw/2016-11-08_0621.C3132,raw/2016-11-08_0907.C3132,raw/2016-11-08_1154.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
 
 atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
 
@@ -961,7 +961,24 @@ Antenna off-source/off-line  2.48%
 
 No CACAL data was detected
 
-2018-08-03 03:30:39,241 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
+2018-08-06 10:22:51,583 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,50,850,1 flagval=flag
+
+uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
+
+
+Set flags to indicate bad data in visibility file data9.uv
+Linetype channel; select   50 channels; start  850, width    1, step    1
+
+Overview of flagging on visibility file data9.uv
+Changed flags set to FALSE (data flagged as bad)
+Total number of records selected: 271608; out of 271608 records
+Antennas used: 1-6
+Counts of correlations within selected channels
+channel   Originally    Currently
+Good:        13580400.           0.    Changed to bad:    13580400.
+Bad:                0.    13580400.
+
+2018-08-06 10:23:29,814 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
@@ -969,44 +986,44 @@ Creating 1934-638.9500
 Creating 2245-328.9500
 Creating d.9500
 
-2018-08-03 03:30:51,808 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+2018-08-06 10:23:41,027 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:       8680740    8578428    Changed to bad:     102312
- Bad:        1031520    1133832    Changed to good:         0
- 11.7% of the data is now flagged
+ Good:       8443740    8367180    Changed to bad:      76560
+ Bad:        1268520    1345080    Changed to good:         0
+ 13.8% of the data is now flagged
 
-2018-08-03 03:31:01,650 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
-
-pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
-
-Applying changes to dataset
-Counts of correlations within selected channels:
- channel  Originally  Currently
- Good:       8578428    8476336    Changed to bad:     102092
- Bad:        1133832    1235924    Changed to good:         0
- 12.7% of the data is now flagged
-
-2018-08-03 03:31:10,379 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:23:51,636 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:       8476336    8336976    Changed to bad:     139360
- Bad:        1235924    1375284    Changed to good:         0
- 14.2% of the data is now flagged
+ Good:       8367180    8262436    Changed to bad:     104744
+ Bad:        1345080    1449824    Changed to good:         0
+ 14.9% of the data is now flagged
 
-2018-08-03 03:32:06,015 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+2018-08-06 10:24:02,860 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8262436    8118248    Changed to bad:     144188
+ Bad:        1449824    1594012    Changed to good:         0
+ 16.4% of the data is now flagged
+
+2018-08-06 10:24:54,796 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
 MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
 Selecting parallel-hand polarisations
 Reading the data ...
-Number correlations accepted: 4168488
+Number correlations accepted: 4059124
 Number of frequency bands/settings: 1
 Number of polarisations selected: 2
 Number of solution intervals: 79
@@ -1016,12 +1033,12 @@ Using post-Aug94 ATCA flux scale for 1934-638.
 Using known frequency variation of 1934-638
 Generating initial solution estimate ...
 Doing solution refinement ...
-Iter= 1, Solution Error:  0.440
-Iter= 2, Solution Error:  0.021
+Iter= 1, Solution Error:  0.472
+Iter= 2, Solution Error:  0.022
 Iter= 3, Solution Error:  0.000
 Saving solution ...
 
-2018-08-03 03:32:06,866 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+2018-08-06 10:24:59,097 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1032,31 +1049,13 @@ Number of solution intervals: 79
 Total visibilities read: 1185
 Number visibilities accepted: 1185
 Using post-Aug94 ATCA flux scale for 1934-638.
-Using IQUV =  2.5373,  0.0000,  0.0000,  0.0000 at   9.4627 GHz.
+Using IQUV =  2.5363,  0.0000,  0.0000,  0.0000 at   9.4657 GHz.
 Using post-Aug94 ATCA flux scale for 1934-638.
-Using IQUV =  2.6883,  0.0000,  0.0000,  0.0000 at   9.0330 GHz.
+Using IQUV =  2.6946,  0.0000,  0.0000,  0.0000 at   9.0163 GHz.
 Using post-Aug94 ATCA flux scale for 1934-638.
 Using IQUV =  2.3859,  0.0000,  0.0000,  0.0000 at   9.9447 GHz.
-Iter= 1, Amplit/Phase Solution Error:   1.243
+Iter= 1, Amplit/Phase Solution Error:   1.246
 Iter= 1, Polarisation Solution Error:   0.031
-Iter= 1, Overall Solution Error:        1.822
-Iter= 2, Amplit/Phase Solution Error:   0.002
-Iter= 2, Polarisation Solution Error:   0.000
-Iter= 2, Overall Solution Error:        0.003
-Iter= 3, Amplit/Phase Solution Error:   0.001
-Iter= 3, Polarisation Solution Error:   0.000
-Iter= 3, Overall Solution Error:        0.001
-I flux density:   2.5373
-Leakage terms:
- Ant 1:Dx,Dy = ( 0.00143,-0.00080),(-0.00037,-0.00127)
- Ant 2:Dx,Dy = ( 0.00348, 0.00077),(-0.00368, 0.00211)
- Ant 3:Dx,Dy = ( 0.00584,-0.00129),(-0.00991,-0.00119)
- Ant 4:Dx,Dy = ( 0.00197, 0.01463),(-0.00069, 0.01505)
- Ant 5:Dx,Dy = (-0.01719, 0.00117),( 0.01752, 0.00098)
- Ant 6:Dx,Dy = ( 0.00490,-0.01629),(-0.00244,-0.01387)
-Solution for freq bin  1
-Iter= 1, Amplit/Phase Solution Error:   1.238
-Iter= 1, Polarisation Solution Error:   0.030
 Iter= 1, Overall Solution Error:        1.821
 Iter= 2, Amplit/Phase Solution Error:   0.002
 Iter= 2, Polarisation Solution Error:   0.000
@@ -1064,18 +1063,36 @@ Iter= 2, Overall Solution Error:        0.003
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   2.6883
+I flux density:   2.5363
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00132,-0.00079),(-0.00084,-0.00092)
- Ant 2:Dx,Dy = ( 0.00395, 0.00076),(-0.00429, 0.00290)
- Ant 3:Dx,Dy = ( 0.00591,-0.00175),(-0.00929,-0.00141)
- Ant 4:Dx,Dy = ( 0.00235, 0.01440),(-0.00159, 0.01527)
- Ant 5:Dx,Dy = (-0.01733, 0.00075),( 0.01710, 0.00102)
- Ant 6:Dx,Dy = ( 0.00409,-0.01595),(-0.00082,-0.01429)
+ Ant 1:Dx,Dy = ( 0.00138,-0.00081),(-0.00039,-0.00131)
+ Ant 2:Dx,Dy = ( 0.00346, 0.00074),(-0.00368, 0.00215)
+ Ant 3:Dx,Dy = ( 0.00578,-0.00125),(-0.00994,-0.00111)
+ Ant 4:Dx,Dy = ( 0.00197, 0.01466),(-0.00066, 0.01510)
+ Ant 5:Dx,Dy = (-0.01719, 0.00119),( 0.01757, 0.00098)
+ Ant 6:Dx,Dy = ( 0.00491,-0.01643),(-0.00259,-0.01390)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.230
+Iter= 1, Polarisation Solution Error:   0.031
+Iter= 1, Overall Solution Error:        1.819
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.6946
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00122,-0.00082),(-0.00090,-0.00098)
+ Ant 2:Dx,Dy = ( 0.00394, 0.00071),(-0.00432, 0.00303)
+ Ant 3:Dx,Dy = ( 0.00581,-0.00171),(-0.00932,-0.00127)
+ Ant 4:Dx,Dy = ( 0.00237, 0.01444),(-0.00159, 0.01538)
+ Ant 5:Dx,Dy = (-0.01734, 0.00077),( 0.01718, 0.00103)
+ Ant 6:Dx,Dy = ( 0.00406,-0.01619),(-0.00100,-0.01438)
 Solution for freq bin  2
-Iter= 1, Amplit/Phase Solution Error:   1.220
+Iter= 1, Amplit/Phase Solution Error:   1.224
 Iter= 1, Polarisation Solution Error:   0.032
-Iter= 1, Overall Solution Error:        1.826
+Iter= 1, Overall Solution Error:        1.825
 Iter= 2, Amplit/Phase Solution Error:   0.002
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.003
@@ -1084,28 +1101,14 @@ Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
 I flux density:   2.3859
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00157,-0.00081),( 0.00019,-0.00171)
- Ant 2:Dx,Dy = ( 0.00290, 0.00077),(-0.00294, 0.00116)
- Ant 3:Dx,Dy = ( 0.00575,-0.00069),(-0.01066,-0.00093)
- Ant 4:Dx,Dy = ( 0.00150, 0.01491),( 0.00041, 0.01478)
- Ant 5:Dx,Dy = (-0.01702, 0.00167),( 0.01802, 0.00093)
- Ant 6:Dx,Dy = ( 0.00589,-0.01672),(-0.00443,-0.01336)
+ Ant 1:Dx,Dy = ( 0.00157,-0.00080),( 0.00018,-0.00172)
+ Ant 2:Dx,Dy = ( 0.00290, 0.00077),(-0.00293, 0.00116)
+ Ant 3:Dx,Dy = ( 0.00575,-0.00070),(-0.01066,-0.00092)
+ Ant 4:Dx,Dy = ( 0.00149, 0.01491),( 0.00041, 0.01478)
+ Ant 5:Dx,Dy = (-0.01702, 0.00167),( 0.01801, 0.00094)
+ Ant 6:Dx,Dy = ( 0.00589,-0.01672),(-0.00444,-0.01336)
 
-2018-08-03 03:32:20,807 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
-
-pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
-
-Applying bandpass corrections to 1934-638.9500
-Applying freq. dependent gain corrections to 1934-638.9500
-Applying freq. dependent leakage correction to 1934-638.9500
-Applying changes to dataset
-Counts of correlations within selected channels:
- channel  Originally  Currently
- Good:       8336976    8311752    Changed to bad:      25224
- Bad:        1375284    1400508    Changed to good:         0
- 14.4% of the data is now flagged
-
-2018-08-03 03:32:34,400 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:25:20,169 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1115,11 +1118,11 @@ Applying freq. dependent leakage correction to 1934-638.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:       8311752    8285316    Changed to bad:      26436
- Bad:        1400508    1426944    Changed to good:         0
- 14.7% of the data is now flagged
+ Good:       8118248    8091104    Changed to bad:      27144
+ Bad:        1594012    1621156    Changed to good:         0
+ 16.7% of the data is now flagged
 
-2018-08-03 03:32:47,450 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:25:41,992 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1129,15 +1132,29 @@ Applying freq. dependent leakage correction to 1934-638.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:       8285316    8263480    Changed to bad:      21836
- Bad:        1426944    1448780    Changed to good:         0
- 14.9% of the data is now flagged
+ Good:       8091104    8060728    Changed to bad:      30376
+ Bad:        1621156    1651532    Changed to good:         0
+ 17.0% of the data is now flagged
 
-2018-08-03 03:33:45,385 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+2018-08-06 10:26:06,943 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Applying freq. dependent gain corrections to 1934-638.9500
+Applying freq. dependent leakage correction to 1934-638.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8060728    8034564    Changed to bad:      26164
+ Bad:        1651532    1677696    Changed to good:         0
+ 17.3% of the data is now flagged
+
+2018-08-06 10:27:01,647 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
 MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
 Selecting parallel-hand polarisations
 Reading the data ...
-Number correlations accepted: 4131740
+Number correlations accepted: 4017282
 Number of frequency bands/settings: 1
 Number of polarisations selected: 2
 Number of solution intervals: 79
@@ -1147,12 +1164,12 @@ Using post-Aug94 ATCA flux scale for 1934-638.
 Using known frequency variation of 1934-638
 Generating initial solution estimate ...
 Doing solution refinement ...
-Iter= 1, Solution Error:  0.443
-Iter= 2, Solution Error:  0.021
+Iter= 1, Solution Error:  0.475
+Iter= 2, Solution Error:  0.022
 Iter= 3, Solution Error:  0.000
 Saving solution ...
 
-2018-08-03 03:33:46,263 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+2018-08-06 10:27:03,824 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1164,31 +1181,13 @@ Number of solution intervals: 79
 Total visibilities read: 1185
 Number visibilities accepted: 1185
 Using post-Aug94 ATCA flux scale for 1934-638.
-Using IQUV =  2.5376,  0.0000,  0.0000,  0.0000 at   9.4619 GHz.
+Using IQUV =  2.5366,  0.0000,  0.0000,  0.0000 at   9.4650 GHz.
 Using post-Aug94 ATCA flux scale for 1934-638.
-Using IQUV =  2.6874,  0.0000,  0.0000,  0.0000 at   9.0355 GHz.
+Using IQUV =  2.6939,  0.0000,  0.0000,  0.0000 at   9.0179 GHz.
 Using post-Aug94 ATCA flux scale for 1934-638.
 Using IQUV =  2.3869,  0.0000,  0.0000,  0.0000 at   9.9414 GHz.
-Iter= 1, Amplit/Phase Solution Error:   1.240
+Iter= 1, Amplit/Phase Solution Error:   1.244
 Iter= 1, Polarisation Solution Error:   0.000
-Iter= 1, Overall Solution Error:        1.822
-Iter= 2, Amplit/Phase Solution Error:   0.002
-Iter= 2, Polarisation Solution Error:   0.000
-Iter= 2, Overall Solution Error:        0.003
-Iter= 3, Amplit/Phase Solution Error:   0.001
-Iter= 3, Polarisation Solution Error:   0.000
-Iter= 3, Overall Solution Error:        0.001
-I flux density:   2.5376
-Leakage terms:
- Ant 1:Dx,Dy = ( 0.00145,-0.00081),(-0.00036,-0.00130)
- Ant 2:Dx,Dy = ( 0.00349, 0.00078),(-0.00368, 0.00209)
- Ant 3:Dx,Dy = ( 0.00584,-0.00130),(-0.00991,-0.00120)
- Ant 4:Dx,Dy = ( 0.00197, 0.01462),(-0.00071, 0.01504)
- Ant 5:Dx,Dy = (-0.01720, 0.00122),( 0.01753, 0.00104)
- Ant 6:Dx,Dy = ( 0.00490,-0.01631),(-0.00241,-0.01387)
-Solution for freq bin  1
-Iter= 1, Amplit/Phase Solution Error:   1.239
-Iter= 1, Polarisation Solution Error:   0.002
 Iter= 1, Overall Solution Error:        1.821
 Iter= 2, Amplit/Phase Solution Error:   0.002
 Iter= 2, Polarisation Solution Error:   0.000
@@ -1196,18 +1195,36 @@ Iter= 2, Overall Solution Error:        0.003
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   2.6874
+I flux density:   2.5366
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00134,-0.00083),(-0.00082,-0.00097)
- Ant 2:Dx,Dy = ( 0.00397, 0.00076),(-0.00429, 0.00288)
- Ant 3:Dx,Dy = ( 0.00592,-0.00177),(-0.00929,-0.00143)
- Ant 4:Dx,Dy = ( 0.00234, 0.01437),(-0.00163, 0.01526)
- Ant 5:Dx,Dy = (-0.01735, 0.00083),( 0.01711, 0.00113)
- Ant 6:Dx,Dy = ( 0.00409,-0.01597),(-0.00077,-0.01428)
-Solution for freq bin  2
-Iter= 1, Amplit/Phase Solution Error:   1.218
+ Ant 1:Dx,Dy = ( 0.00140,-0.00082),(-0.00039,-0.00134)
+ Ant 2:Dx,Dy = ( 0.00348, 0.00074),(-0.00367, 0.00213)
+ Ant 3:Dx,Dy = ( 0.00577,-0.00126),(-0.00994,-0.00111)
+ Ant 4:Dx,Dy = ( 0.00198, 0.01465),(-0.00069, 0.01509)
+ Ant 5:Dx,Dy = (-0.01720, 0.00124),( 0.01759, 0.00105)
+ Ant 6:Dx,Dy = ( 0.00491,-0.01646),(-0.00257,-0.01391)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.230
 Iter= 1, Polarisation Solution Error:   0.002
-Iter= 1, Overall Solution Error:        1.826
+Iter= 1, Overall Solution Error:        1.819
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.6939
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00124,-0.00085),(-0.00088,-0.00102)
+ Ant 2:Dx,Dy = ( 0.00397, 0.00071),(-0.00432, 0.00300)
+ Ant 3:Dx,Dy = ( 0.00581,-0.00173),(-0.00932,-0.00128)
+ Ant 4:Dx,Dy = ( 0.00237, 0.01441),(-0.00162, 0.01536)
+ Ant 5:Dx,Dy = (-0.01736, 0.00086),( 0.01721, 0.00114)
+ Ant 6:Dx,Dy = ( 0.00406,-0.01623),(-0.00097,-0.01438)
+Solution for freq bin  2
+Iter= 1, Amplit/Phase Solution Error:   1.222
+Iter= 1, Polarisation Solution Error:   0.002
+Iter= 1, Overall Solution Error:        1.825
 Iter= 2, Amplit/Phase Solution Error:   0.002
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.003
@@ -1216,14 +1233,14 @@ Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
 I flux density:   2.3869
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00157,-0.00081),( 0.00018,-0.00173)
+ Ant 1:Dx,Dy = ( 0.00158,-0.00080),( 0.00017,-0.00173)
  Ant 2:Dx,Dy = ( 0.00290, 0.00079),(-0.00293, 0.00116)
- Ant 3:Dx,Dy = ( 0.00574,-0.00069),(-0.01066,-0.00092)
- Ant 4:Dx,Dy = ( 0.00151, 0.01492),( 0.00040, 0.01478)
- Ant 5:Dx,Dy = (-0.01702, 0.00168),( 0.01803, 0.00094)
+ Ant 3:Dx,Dy = ( 0.00574,-0.00070),(-0.01066,-0.00092)
+ Ant 4:Dx,Dy = ( 0.00151, 0.01492),( 0.00040, 0.01479)
+ Ant 5:Dx,Dy = (-0.01702, 0.00167),( 0.01803, 0.00095)
  Ant 6:Dx,Dy = ( 0.00588,-0.01674),(-0.00443,-0.01337)
 
-2018-08-03 03:33:46,351 [MainThread  ] [INFO ]  gpcopy vis=1934-638.9500 out=2245-328.9500
+2018-08-06 10:27:06,669 [MainThread  ] [INFO ]  gpcopy vis=1934-638.9500 out=2245-328.9500
 
 gpcopy: Revision 1.13, 2015/10/29 01:31:39 UTC
 
@@ -1232,7 +1249,7 @@ Copying gain table
 Interpolation tolerance set to (minutes): 720.00
 Copying bandpass table
 
-2018-08-03 03:36:07,610 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+2018-08-06 10:29:37,656 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1242,25 +1259,11 @@ Applying freq. dependent leakage correction to 2245-328.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:      66105312   65619500    Changed to bad:     485812
- Bad:        7789824    8275636    Changed to good:         0
- 11.2% of the data is now flagged
+ Good:      64302112   63899640    Changed to bad:     402472
+ Bad:        9593024    9995496    Changed to good:         0
+ 13.5% of the data is now flagged
 
-2018-08-03 03:38:15,860 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
-
-pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
-
-Applying bandpass corrections to 2245-328.9500
-Applying freq. dependent gain corrections to 2245-328.9500
-Applying freq. dependent leakage correction to 2245-328.9500
-Applying changes to dataset
-Counts of correlations within selected channels:
- channel  Originally  Currently
- Good:      65619500   65267060    Changed to bad:     352440
- Bad:        8275636    8628076    Changed to good:         0
- 11.7% of the data is now flagged
-
-2018-08-03 03:40:33,157 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:31:54,657 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1270,11 +1273,25 @@ Applying freq. dependent leakage correction to 2245-328.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:      65267060   64957284    Changed to bad:     309776
- Bad:        8628076    8937852    Changed to good:         0
- 12.1% of the data is now flagged
+ Good:      63899640   63561976    Changed to bad:     337664
+ Bad:        9995496   10333160    Changed to good:         0
+ 14.0% of the data is now flagged
 
-2018-08-03 03:40:37,081 [MainThread  ] [INFO ]  gpcal vis=2245-328.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
+2018-08-06 10:34:10,791 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2245-328.9500
+Applying freq. dependent gain corrections to 2245-328.9500
+Applying freq. dependent leakage correction to 2245-328.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      63561976   63249404    Changed to bad:     312572
+ Bad:       10333160   10645732    Changed to good:         0
+ 14.4% of the data is now flagged
+
+2018-08-06 10:34:15,029 [MainThread  ] [INFO ]  gpcal vis=2245-328.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1285,9 +1302,9 @@ Reading the data ...
 Number of solution intervals: 601
 Total visibilities read: 9016
 Number visibilities accepted: 9010
-Iter= 1, Amplit/Phase Solution Error:   1.389
+Iter= 1, Amplit/Phase Solution Error:   1.387
 Iter= 1, Polarisation Solution Error:   0.005
-Iter= 1, Overall Solution Error:        2.009
+Iter= 1, Overall Solution Error:        2.007
 Iter= 2, Amplit/Phase Solution Error:   0.007
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.007
@@ -1296,56 +1313,56 @@ Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
 I flux density:   0.7243
 Percent Q:  -0.457
-Percent U:  -0.421
+Percent U:  -0.422
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00100,-0.00172),(-0.00013,-0.00028)
- Ant 2:Dx,Dy = ( 0.00343, 0.00012),(-0.00360, 0.00280)
- Ant 3:Dx,Dy = ( 0.00628,-0.00185),(-0.00985,-0.00050)
- Ant 4:Dx,Dy = ( 0.00136, 0.01404),(-0.00005, 0.01555)
- Ant 5:Dx,Dy = (-0.01676, 0.00053),( 0.01731, 0.00178)
- Ant 6:Dx,Dy = ( 0.00522,-0.01697),(-0.00316,-0.01349)
+ Ant 1:Dx,Dy = ( 0.00096,-0.00174),(-0.00016,-0.00033)
+ Ant 2:Dx,Dy = ( 0.00341, 0.00009),(-0.00360, 0.00283)
+ Ant 3:Dx,Dy = ( 0.00623,-0.00181),(-0.00989,-0.00043)
+ Ant 4:Dx,Dy = ( 0.00138, 0.01409),(-0.00002, 0.01561)
+ Ant 5:Dx,Dy = (-0.01677, 0.00054),( 0.01738, 0.00179)
+ Ant 6:Dx,Dy = ( 0.00522,-0.01709),(-0.00329,-0.01354)
 Solution for freq bin  1
-Iter= 1, Amplit/Phase Solution Error:   1.379
+Iter= 1, Amplit/Phase Solution Error:   1.378
 Iter= 1, Polarisation Solution Error:   0.004
-Iter= 1, Overall Solution Error:        2.010
+Iter= 1, Overall Solution Error:        2.008
 Iter= 2, Amplit/Phase Solution Error:   0.006
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.007
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   0.7172
+I flux density:   0.7171
 Percent Q:  -0.437
-Percent U:  -0.413
+Percent U:  -0.414
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00071,-0.00178),(-0.00057,-0.00006)
- Ant 2:Dx,Dy = ( 0.00398, 0.00029),(-0.00422, 0.00362)
- Ant 3:Dx,Dy = ( 0.00629,-0.00230),(-0.00921,-0.00095)
- Ant 4:Dx,Dy = ( 0.00172, 0.01406),(-0.00128, 0.01536)
- Ant 5:Dx,Dy = (-0.01676, 0.00020),( 0.01677, 0.00179)
- Ant 6:Dx,Dy = ( 0.00419,-0.01646),(-0.00138,-0.01377)
+ Ant 1:Dx,Dy = ( 0.00060,-0.00182),(-0.00066,-0.00014)
+ Ant 2:Dx,Dy = ( 0.00395, 0.00022),(-0.00424, 0.00373)
+ Ant 3:Dx,Dy = ( 0.00619,-0.00223),(-0.00925,-0.00083)
+ Ant 4:Dx,Dy = ( 0.00177, 0.01416),(-0.00129, 0.01547)
+ Ant 5:Dx,Dy = (-0.01676, 0.00021),( 0.01689, 0.00182)
+ Ant 6:Dx,Dy = ( 0.00416,-0.01667),(-0.00155,-0.01390)
 Solution for freq bin  2
-Iter= 1, Amplit/Phase Solution Error:   1.382
+Iter= 1, Amplit/Phase Solution Error:   1.380
 Iter= 1, Polarisation Solution Error:   0.005
-Iter= 1, Overall Solution Error:        2.006
+Iter= 1, Overall Solution Error:        2.003
 Iter= 2, Amplit/Phase Solution Error:   0.007
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.006
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   0.7385
+I flux density:   0.7383
 Percent Q:  -0.475
 Percent U:  -0.430
 Leakage terms:
  Ant 1:Dx,Dy = ( 0.00130,-0.00165),( 0.00026,-0.00043)
  Ant 2:Dx,Dy = ( 0.00297,-0.00013),(-0.00292, 0.00206)
- Ant 3:Dx,Dy = ( 0.00625,-0.00142),(-0.01048,-0.00005)
+ Ant 3:Dx,Dy = ( 0.00624,-0.00142),(-0.01047,-0.00005)
  Ant 4:Dx,Dy = ( 0.00098, 0.01407),( 0.00115, 0.01562)
  Ant 5:Dx,Dy = (-0.01675, 0.00091),( 0.01782, 0.00171)
  Ant 6:Dx,Dy = ( 0.00621,-0.01753),(-0.00489,-0.01314)
 
-2018-08-03 03:43:01,866 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+2018-08-06 10:36:40,748 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1355,25 +1372,11 @@ Applying freq. dependent leakage correction to 2245-328.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:      64957284   64717488    Changed to bad:     239796
- Bad:        8937852    9177648    Changed to good:         0
- 12.4% of the data is now flagged
+ Good:      63249404   62998968    Changed to bad:     250436
+ Bad:       10645732   10896168    Changed to good:         0
+ 14.7% of the data is now flagged
 
-2018-08-03 03:45:17,267 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
-
-pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
-
-Applying bandpass corrections to 2245-328.9500
-Applying freq. dependent gain corrections to 2245-328.9500
-Applying freq. dependent leakage correction to 2245-328.9500
-Applying changes to dataset
-Counts of correlations within selected channels:
- channel  Originally  Currently
- Good:      64717488   64504504    Changed to bad:     212984
- Bad:        9177648    9390632    Changed to good:         0
- 12.7% of the data is now flagged
-
-2018-08-03 03:47:33,266 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:38:54,894 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1383,11 +1386,25 @@ Applying freq. dependent leakage correction to 2245-328.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:      64504504   64309312    Changed to bad:     195192
- Bad:        9390632    9585824    Changed to good:         0
- 13.0% of the data is now flagged
+ Good:      62998968   62768532    Changed to bad:     230436
+ Bad:       10896168   11126604    Changed to good:         0
+ 15.1% of the data is now flagged
 
-2018-08-03 03:47:36,881 [MainThread  ] [INFO ]  gpcal vis=2245-328.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
+2018-08-06 10:41:11,461 [MainThread  ] [INFO ]  pgflag vis=2245-328.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2245-328.9500
+Applying freq. dependent gain corrections to 2245-328.9500
+Applying freq. dependent leakage correction to 2245-328.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      62768532   62553600    Changed to bad:     214932
+ Bad:       11126604   11341536    Changed to good:         0
+ 15.3% of the data is now flagged
+
+2018-08-06 10:41:15,555 [MainThread  ] [INFO ]  gpcal vis=2245-328.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1398,9 +1415,9 @@ Reading the data ...
 Number of solution intervals: 601
 Total visibilities read: 9016
 Number visibilities accepted: 9010
-Iter= 1, Amplit/Phase Solution Error:   1.389
+Iter= 1, Amplit/Phase Solution Error:   1.387
 Iter= 1, Polarisation Solution Error:   0.005
-Iter= 1, Overall Solution Error:        2.009
+Iter= 1, Overall Solution Error:        2.007
 Iter= 2, Amplit/Phase Solution Error:   0.007
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.007
@@ -1409,56 +1426,56 @@ Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
 I flux density:   0.7297
 Percent Q:  -0.456
-Percent U:  -0.421
+Percent U:  -0.422
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00100,-0.00172),(-0.00013,-0.00030)
- Ant 2:Dx,Dy = ( 0.00344, 0.00011),(-0.00360, 0.00280)
- Ant 3:Dx,Dy = ( 0.00628,-0.00185),(-0.00985,-0.00050)
- Ant 4:Dx,Dy = ( 0.00136, 0.01404),(-0.00004, 0.01554)
- Ant 5:Dx,Dy = (-0.01677, 0.00055),( 0.01731, 0.00179)
- Ant 6:Dx,Dy = ( 0.00521,-0.01699),(-0.00316,-0.01348)
+ Ant 1:Dx,Dy = ( 0.00096,-0.00174),(-0.00016,-0.00034)
+ Ant 2:Dx,Dy = ( 0.00341, 0.00007),(-0.00360, 0.00284)
+ Ant 3:Dx,Dy = ( 0.00623,-0.00180),(-0.00989,-0.00043)
+ Ant 4:Dx,Dy = ( 0.00138, 0.01409),(-0.00001, 0.01560)
+ Ant 5:Dx,Dy = (-0.01677, 0.00057),( 0.01738, 0.00180)
+ Ant 6:Dx,Dy = ( 0.00521,-0.01711),(-0.00330,-0.01354)
 Solution for freq bin  1
-Iter= 1, Amplit/Phase Solution Error:   1.378
+Iter= 1, Amplit/Phase Solution Error:   1.376
 Iter= 1, Polarisation Solution Error:   0.004
-Iter= 1, Overall Solution Error:        2.010
+Iter= 1, Overall Solution Error:        2.008
 Iter= 2, Amplit/Phase Solution Error:   0.006
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.006
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   0.7225
-Percent Q:  -0.436
-Percent U:  -0.413
+I flux density:   0.7223
+Percent Q:  -0.435
+Percent U:  -0.414
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00070,-0.00178),(-0.00056,-0.00008)
- Ant 2:Dx,Dy = ( 0.00398, 0.00027),(-0.00423, 0.00361)
- Ant 3:Dx,Dy = ( 0.00630,-0.00230),(-0.00921,-0.00095)
- Ant 4:Dx,Dy = ( 0.00173, 0.01407),(-0.00127, 0.01535)
- Ant 5:Dx,Dy = (-0.01678, 0.00022),( 0.01676, 0.00181)
- Ant 6:Dx,Dy = ( 0.00417,-0.01647),(-0.00137,-0.01375)
+ Ant 1:Dx,Dy = ( 0.00060,-0.00183),(-0.00065,-0.00015)
+ Ant 2:Dx,Dy = ( 0.00396, 0.00020),(-0.00426, 0.00373)
+ Ant 3:Dx,Dy = ( 0.00619,-0.00223),(-0.00926,-0.00083)
+ Ant 4:Dx,Dy = ( 0.00179, 0.01416),(-0.00128, 0.01545)
+ Ant 5:Dx,Dy = (-0.01678, 0.00024),( 0.01688, 0.00184)
+ Ant 6:Dx,Dy = ( 0.00413,-0.01670),(-0.00155,-0.01389)
 Solution for freq bin  2
-Iter= 1, Amplit/Phase Solution Error:   1.382
+Iter= 1, Amplit/Phase Solution Error:   1.381
 Iter= 1, Polarisation Solution Error:   0.005
-Iter= 1, Overall Solution Error:        2.005
+Iter= 1, Overall Solution Error:        2.003
 Iter= 2, Amplit/Phase Solution Error:   0.007
 Iter= 2, Polarisation Solution Error:   0.000
 Iter= 2, Overall Solution Error:        0.006
 Iter= 3, Amplit/Phase Solution Error:   0.001
 Iter= 3, Polarisation Solution Error:   0.000
 Iter= 3, Overall Solution Error:        0.001
-I flux density:   0.7439
+I flux density:   0.7437
 Percent Q:  -0.474
 Percent U:  -0.430
 Leakage terms:
- Ant 1:Dx,Dy = ( 0.00130,-0.00165),( 0.00026,-0.00045)
+ Ant 1:Dx,Dy = ( 0.00129,-0.00165),( 0.00026,-0.00046)
  Ant 2:Dx,Dy = ( 0.00297,-0.00013),(-0.00292, 0.00208)
  Ant 3:Dx,Dy = ( 0.00624,-0.00142),(-0.01048,-0.00006)
- Ant 4:Dx,Dy = ( 0.00098, 0.01407),( 0.00115, 0.01561)
+ Ant 4:Dx,Dy = ( 0.00097, 0.01407),( 0.00115, 0.01562)
  Ant 5:Dx,Dy = (-0.01674, 0.00092),( 0.01782, 0.00172)
  Ant 6:Dx,Dy = ( 0.00620,-0.01755),(-0.00489,-0.01315)
 
-2018-08-03 03:47:36,906 [MainThread  ] [INFO ]  gpboot vis=2245-328.9500 cal=1934-638.9500
+2018-08-06 10:41:15,576 [MainThread  ] [INFO ]  gpboot vis=2245-328.9500 cal=1934-638.9500
 
 gpboot: Revision 1.9, 2015/10/29 01:31:30 UTC
 
@@ -1466,7 +1483,7 @@ Secondary flux density scaled by:   0.986
 Frequency bin  1 scaled by      :   0.982
 Frequency bin  2 scaled by      :   0.988
 
-2018-08-03 03:48:50,013 [MainThread  ] [INFO ]  gpcopy vis=2245-328.9500 out=d.9500
+2018-08-06 10:42:27,441 [MainThread  ] [INFO ]  gpcopy vis=2245-328.9500 out=d.9500
 
 gpcopy: Revision 1.13, 2015/10/29 01:31:39 UTC
 
@@ -1475,7 +1492,7 @@ Copying gain table
 Interpolation tolerance set to (minutes): 720.00
 Copying bandpass table
 
-2018-08-03 04:02:43,851 [MainThread  ] [INFO ]  pgflag vis=d.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 10:57:45,584 [MainThread  ] [INFO ]  pgflag vis=d.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1485,11 +1502,11 @@ Applying freq. dependent leakage correction to d.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:     423063732  410120860    Changed to bad:   12942872
- Bad:       49853664   62796536    Changed to good:         0
- 13.3% of the data is now flagged
+ Good:     411523532  399567376    Changed to bad:   11956156
+ Bad:       61393864   73350020    Changed to good:         0
+ 15.5% of the data is now flagged
 
-2018-08-03 04:16:07,653 [MainThread  ] [INFO ]  pgflag vis=d.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-08-06 11:13:11,355 [MainThread  ] [INFO ]  pgflag vis=d.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1499,11 +1516,11 @@ Applying freq. dependent leakage correction to d.9500
 Applying changes to dataset
 Counts of correlations within selected channels:
  channel  Originally  Currently
- Good:     410120860  401381040    Changed to bad:    8739820
- Bad:       62796536   71536356    Changed to good:         0
- 15.1% of the data is now flagged
+ Good:     399567376  391089368    Changed to bad:    8478008
+ Bad:       73350020   81828028    Changed to good:         0
+ 17.3% of the data is now flagged
 
-2018-08-03 04:17:46,911 [MainThread  ] [INFO ]  uvsplit vis=d.9500
+2018-08-06 11:15:26,837 [MainThread  ] [INFO ]  uvsplit vis=d.9500
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
