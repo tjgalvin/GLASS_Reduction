@@ -31,6 +31,10 @@ files = glob('raw/*C3132')
 # Example loading in files assuming first is setup
 # files = glob('raw/*C3132').pop(0)
 
+# Glob order is not the same as sort order
+# Can lead to problems with 0 and 9s. 
+files = sorted(files)
+
 # Load in data. Remember to set ifsel appropriately
 atlod = m(f"atlod in={','.join(files)} out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr").run()
 logger.log(logging.INFO, atlod)

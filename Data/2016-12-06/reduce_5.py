@@ -71,7 +71,7 @@ logger.log(logging.INFO, gpcal)
 
 mu.calibrator_pgflag(secondary)
 
-gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
+gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=reset,xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)
 
 gpboot = m(f"gpboot vis={secondary} cal={primary}").run()
