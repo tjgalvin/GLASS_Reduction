@@ -26,10 +26,14 @@ NFBIN = 2
 FREQ = 9500
 
 # Load in files assuming the setup file/s have been renamed or deleted
+# Can lead to problems with 0 and 9s. 
 files = glob('raw/*C3132')
 
 # Example loading in files assuming first is setup
 # files = glob('raw/*C3132').pop(0)
+
+# Glob order is not the same as sort order
+files = sorted(files)
 
 # Load in data. Remember to set ifsel appropriately
 atlod = m(f"atlod in={','.join(files)} out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr").run()
