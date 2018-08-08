@@ -28,7 +28,7 @@ flags_5 = {'chan_start':[5622-ref_5, 5930-ref_5, 6440-ref_5],
 
 ref_9 = 8476
 flags_9 = {'chan_start':[850],
-           'chan_end'  :[900]}
+           'chan_end'  :[915]}
 
 
 frequencyFlagging = {
