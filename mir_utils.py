@@ -118,10 +118,13 @@ def derive_obs_sources(uvsplit, freq):
     secondary_srcs = ['2245-328', '2312-319']
     target_srcs = ['a','b','c','d','e','f']
 
+    freq = f"{freq}"
+
     primary = None
     secondary = None
     targets = []
-    for l in uvsplit.split():
+
+    for l in str(uvsplit).split():
         if freq in l:
             src = l.split('.')[0]
             # 1934-628 should always be there
