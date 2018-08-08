@@ -42,6 +42,11 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_5)
 
+# Really bad RFI at end of run. See if we can save it, otherwise
+# consider flagging out last hour
+uvflag = m(f"uvflag vis={atlod.out} flagval=flag select=time(12:03:10,13:00:00)").run()
+logger.log(logging.INFO, uvflag)
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
