@@ -166,6 +166,9 @@ def mv_uv(freq:str):
     Arguments:
         freq {str} -- The frequency of the pipeline
     """
+    if not isinstance(freq, str):
+        freq = str(freq)
+
     if not os.path.exists('Plots'):
         # Potential race conditions
         try:
@@ -195,7 +198,7 @@ def mv_uv(freq:str):
         except:
             pass
 
-    if freq == 5500:
+    if freq == '5500':
         su.move('data5.uv', 'uv')
     elif freq == '9500':
         su.move('data9.uv', 'uv')
