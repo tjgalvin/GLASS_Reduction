@@ -42,6 +42,14 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_5)
 
+# Block went offline
+uvflag = m(f"uvflag vis={atlod.out} flagval=flag select=time(00:56:10,01:11:40)").run()
+logger.log(logging.INFO, uvflag)
+
+uvflag = m(f"uvflag vis={atlod.out} flagval=flag select=time(03:02:00,03:11:00)").run()
+logger.log(logging.INFO, uvflag)
+
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
