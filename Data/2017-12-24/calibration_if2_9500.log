@@ -1,0 +1,1763 @@
+2018-08-08 05:47:43,253 [MainThread  ] [INFO ]  atlod in=raw/2017-12-24_0114.C3132,raw/2017-12-24_0406.C3132,raw/2017-12-24_0652.C3132,raw/2017-12-24_0939.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
+
+atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
+
+Processing file raw/2017-12-24_0114.C3132
+ 01:13:60 CAOBS> track 1
+CABB data detected
+Scan 1 started at 17DEC24:01:14:20.0
+Source: 1934-638
+Flagging channels in  28 frequency ranges
+ 01:25:01 CAOBS> st file c3132_obs_b3.sch
+ 01:25:07 CAOBS> set file c3132_obs_b3.sch
+ 01:25:15 CAOBS> stop
+ 01:25:16 CAOBS> set file c3132_obs_b3.sch
+ 01:25:37 CAOBS> start 7/99
+Scan 2 started at 17DEC24:01:27:24.0
+Source: 2312-319
+Scan 3 started at 17DEC24:01:30:04.0
+Source: b_541
+Source: b_542
+Source: b_543
+Source: b_544
+Source: b_545
+Source: b_546
+Source: b_547
+Source: b_548
+Source: b_549
+Source: b_550
+Source: b_551
+Source: b_552
+Source: b_553
+Source: b_554
+Source: b_555
+Source: b_556
+Source: b_557
+Source: b_558
+Source: b_559
+Source: b_560
+Scan 4 started at 17DEC24:01:43:32.0
+Source: 2312-319
+Scan 5 started at 17DEC24:01:46:12.0
+Source: b_561
+Source: b_562
+Source: b_563
+Source: b_564
+Source: b_565
+Source: b_566
+Source: b_567
+Source: b_568
+Source: b_569
+Source: b_570
+Source: b_571
+Source: b_572
+Source: b_573
+Source: b_574
+Source: b_575
+Source: b_576
+Source: b_577
+Source: b_578
+Source: b_579
+Source: b_580
+Scan 6 started at 17DEC24:01:59:40.0
+Source: 2312-319
+Scan 7 started at 17DEC24:02:02:20.0
+Source: b_581
+Source: b_582
+Source: b_583
+Source: b_584
+Source: b_585
+Source: b_586
+Source: b_587
+Source: b_588
+Source: b_589
+Source: b_590
+Source: b_591
+Source: b_592
+Source: b_593
+Source: b_594
+Source: b_595
+Source: b_596
+Source: b_597
+Source: b_598
+Source: b_599
+Source: b_600
+Scan 8 started at 17DEC24:02:15:48.0
+Source: 2312-319
+Scan 9 started at 17DEC24:02:18:28.0
+Source: b_601
+Source: b_602
+Source: b_603
+Source: b_604
+Source: b_605
+Source: b_606
+Source: b_607
+Source: b_608
+Source: b_609
+Source: b_610
+Source: b_611
+Source: b_612
+Source: b_613
+Source: b_614
+Source: b_615
+Source: b_616
+Source: b_617
+Source: b_618
+Source: b_619
+Source: b_620
+Scan 10 started at 17DEC24:02:31:56.0
+Source: 2312-319
+Scan 11 started at 17DEC24:02:34:36.0
+Source: b_621
+Source: b_622
+Source: b_623
+Source: b_624
+Source: b_625
+Source: b_626
+Source: b_627
+Source: b_628
+Source: b_629
+Source: b_630
+Source: b_631
+Source: b_632
+Source: b_633
+Source: b_634
+Source: b_635
+Source: b_636
+Source: b_637
+Source: b_638
+Source: b_639
+Source: b_640
+Scan 12 started at 17DEC24:02:48:04.0
+Source: 2312-319
+Scan 13 started at 17DEC24:02:50:44.0
+Source: b_641
+Source: b_642
+Source: b_643
+Source: b_644
+Source: b_645
+Source: b_646
+Source: b_647
+Source: b_648
+Source: b_649
+Source: b_650
+Source: b_651
+Source: b_652
+Source: b_653
+Source: b_654
+Source: b_655
+Source: b_656
+Source: b_657
+Source: b_658
+Source: b_659
+Source: b_660
+ 03:13:55 CAOBS> start 19/99
+ 03:14:57 CAOBS> stop
+ 03:15:06 CAOBS> stow
+ 03:15:11 CAOBS> stop
+ 03:15:17 CAOBS> start 19/99
+ 03:15:29 CAOBS> start 19/99
+ 03:15:42 CAOBS> stow
+ 03:16:23 CAOBS> stop
+ 03:16:27 CAOBS> stow
+ 03:19:58 CAOBS> start 19/99
+Scan 16 started at 17DEC24:03:22:20.0
+Source: 2312-319
+Scan 17 started at 17DEC24:03:25:08.0
+Source: b_661
+Source: b_662
+Source: b_663
+Source: b_664
+Source: b_665
+Source: b_666
+Source: b_667
+Source: b_668
+Source: b_669
+Source: b_670
+Source: b_671
+Source: b_672
+Source: b_673
+Source: b_674
+Source: b_675
+Source: b_676
+Source: b_677
+Source: b_678
+Source: b_679
+Source: b_680
+Scan 18 started at 17DEC24:03:38:36.0
+Source: 2312-319
+Scan 19 started at 17DEC24:03:41:16.0
+Source: b_681
+Source: b_682
+Source: b_683
+Source: b_684
+Source: b_685
+Source: b_686
+Source: b_687
+Source: b_688
+Source: b_689
+Source: b_690
+Source: b_691
+Source: b_692
+Source: b_693
+Source: b_694
+Source: b_695
+Source: b_696
+Source: b_697
+Source: b_698
+Source: b_699
+Source: b_700
+Scan 20 started at 17DEC24:03:54:44.0
+Source: 2312-319
+Scan 21 started at 17DEC24:03:57:24.0
+Source: b_701
+Source: b_702
+Source: b_703
+Source: b_704
+Source: b_705
+Source: b_706
+Source: b_707
+Source: b_708
+Source: b_709
+Source: b_710
+Source: b_711
+Source: b_712
+Source: b_713
+Source: b_714
+RPFITS file version is 2.12
+---------------------------------------
+Total number of spectra selected: 72660
+
+Summary of spectra flagged
+Flagging Reason            Fraction
+---------------            --------
+Antenna off-source/off-line  11.3%
+---------------------------------------
+Processing file raw/2017-12-24_0406.C3132
+CABB data detected
+Scan 1 started at 17DEC24:04:06:04.0
+Source: b_714
+Source: b_715
+Source: b_716
+Source: b_717
+Source: b_718
+Source: b_719
+Source: b_720
+Scan 2 started at 17DEC24:04:10:52.0
+Source: 2312-319
+Scan 3 started at 17DEC24:04:13:32.0
+Source: b_481
+Source: b_482
+Source: b_483
+Source: b_484
+Source: b_485
+Source: b_486
+Source: b_487
+Source: b_488
+Source: b_489
+Source: b_490
+Source: b_491
+Source: b_492
+Source: b_493
+Source: b_494
+Source: b_495
+Source: b_496
+Source: b_497
+Source: b_498
+Source: b_499
+Source: b_500
+Scan 4 started at 17DEC24:04:27:00.0
+Source: 2312-319
+Scan 5 started at 17DEC24:04:29:40.0
+Source: b_501
+Source: b_502
+Source: b_503
+Source: b_504
+Source: b_505
+Source: b_506
+Source: b_507
+Source: b_508
+Source: b_509
+Source: b_510
+Source: b_511
+Source: b_512
+Source: b_513
+Source: b_514
+Source: b_515
+Source: b_516
+Source: b_517
+Source: b_518
+Source: b_519
+Source: b_520
+Scan 6 started at 17DEC24:04:43:08.0
+Source: 2312-319
+Scan 7 started at 17DEC24:04:45:56.0
+Source: b_521
+Source: b_522
+Source: b_523
+Source: b_524
+Source: b_525
+Source: b_526
+Source: b_527
+Source: b_528
+Source: b_529
+Source: b_530
+Source: b_531
+Source: b_532
+Source: b_533
+Source: b_534
+Source: b_535
+Source: b_536
+Source: b_537
+Source: b_538
+Source: b_539
+Source: b_540
+Scan 8 started at 17DEC24:04:59:16.0
+Source: 2312-319
+Scan 9 started at 17DEC24:05:01:56.0
+Source: b_541
+Source: b_542
+Source: b_543
+Source: b_544
+Source: b_545
+Source: b_546
+Source: b_547
+Source: b_548
+Source: b_549
+Source: b_550
+Source: b_551
+Source: b_552
+Source: b_553
+Source: b_554
+Source: b_555
+Source: b_556
+Source: b_557
+Source: b_558
+Source: b_559
+Source: b_560
+Scan 10 started at 17DEC24:05:15:24.0
+Source: 2312-319
+Scan 11 started at 17DEC24:05:18:04.0
+Source: b_561
+Source: b_562
+Source: b_563
+Source: b_564
+Source: b_565
+Source: b_566
+Source: b_567
+Source: b_568
+Source: b_569
+Source: b_570
+Source: b_571
+Source: b_572
+Source: b_573
+Source: b_574
+Source: b_575
+Source: b_576
+Source: b_577
+Source: b_578
+Source: b_579
+Source: b_580
+Scan 12 started at 17DEC24:05:31:32.0
+Source: 2312-319
+Scan 13 started at 17DEC24:05:34:20.0
+Source: b_581
+Source: b_582
+Source: b_583
+Source: b_584
+Source: b_585
+Source: b_586
+Source: b_587
+Source: b_588
+Source: b_589
+Source: b_590
+Source: b_591
+Source: b_592
+Source: b_593
+Source: b_594
+Source: b_595
+Source: b_596
+Source: b_597
+Source: b_598
+Source: b_599
+Source: b_600
+Scan 14 started at 17DEC24:05:47:48.0
+Source: 2312-319
+Scan 15 started at 17DEC24:05:50:36.0
+Source: b_601
+Source: b_602
+Source: b_603
+Source: b_604
+Source: b_605
+Source: b_606
+Source: b_607
+Source: b_608
+Source: b_609
+Source: b_610
+Source: b_611
+Source: b_612
+Source: b_613
+Source: b_614
+Source: b_615
+Source: b_616
+Source: b_617
+Source: b_618
+Source: b_619
+Source: b_620
+Scan 16 started at 17DEC24:06:03:56.0
+Source: 2312-319
+Scan 17 started at 17DEC24:06:06:52.0
+Source: b_621
+Source: b_622
+Source: b_623
+Source: b_624
+Source: b_625
+Source: b_626
+Source: b_627
+Source: b_628
+Source: b_629
+Source: b_630
+Source: b_631
+Source: b_632
+Source: b_633
+Source: b_634
+Source: b_635
+Source: b_636
+Source: b_637
+Source: b_638
+Source: b_639
+Source: b_640
+Scan 18 started at 17DEC24:06:20:12.0
+Source: 2312-319
+Scan 19 started at 17DEC24:06:23:08.0
+Source: b_641
+Source: b_642
+Source: b_643
+Source: b_644
+Source: b_645
+Source: b_646
+Source: b_647
+Source: b_648
+Source: b_649
+Source: b_650
+Source: b_651
+Source: b_652
+Source: b_653
+Source: b_654
+Source: b_655
+Source: b_656
+Source: b_657
+Source: b_658
+Source: b_659
+Source: b_660
+Scan 20 started at 17DEC24:06:36:44.0
+Source: 2312-319
+Scan 21 started at 17DEC24:06:40:14.8
+Source: b_662
+Source: b_663
+Source: b_664
+Source: b_665
+Source: b_666
+Source: b_667
+Source: b_668
+Source: b_669
+Source: b_670
+Source: b_671
+Source: b_672
+Source: b_673
+Source: b_674
+Source: b_675
+Source: b_676
+Source: b_677
+Source: b_678
+Source: b_679
+Source: b_680
+RPFITS file version is 2.12
+---------------------------------------
+Total number of spectra selected: 72660
+
+Summary of spectra flagged
+Flagging Reason            Fraction
+---------------            --------
+Antenna off-source/off-line  4.54%
+---------------------------------------
+Processing file raw/2017-12-24_0652.C3132
+CABB data detected
+Scan 2 started at 17DEC24:06:53:24.0
+Source: 2312-319
+Scan 3 started at 17DEC24:07:04:37.5
+Source: b_684
+Source: b_688
+Source: b_689
+Source: b_690
+Source: b_691
+Source: b_692
+Source: b_693
+Source: b_694
+Source: b_695
+Source: b_696
+Source: b_697
+Source: b_698
+Source: b_699
+Source: b_700
+Scan 4 started at 17DEC24:07:16:36.0
+Source: 2312-319
+Scan 5 started at 17DEC24:07:19:32.0
+Source: b_701
+Source: b_702
+Source: b_703
+Source: b_704
+Source: b_705
+Source: b_706
+Source: b_707
+Source: b_708
+Source: b_709
+Source: b_710
+Source: b_711
+Source: b_712
+Source: b_713
+Source: b_714
+Source: b_715
+Source: b_716
+Source: b_717
+Source: b_718
+Source: b_719
+Source: b_720
+Scan 6 started at 17DEC24:07:32:52.0
+Source: 2312-319
+Scan 7 started at 17DEC24:07:35:40.0
+Source: b_481
+Source: b_482
+Source: b_483
+Source: b_484
+Source: b_485
+Source: b_486
+Source: b_487
+Source: b_488
+Source: b_489
+Source: b_490
+Source: b_491
+Source: b_492
+Source: b_493
+Source: b_494
+Source: b_495
+Source: b_496
+Source: b_497
+Source: b_498
+Source: b_499
+Source: b_500
+Scan 8 started at 17DEC24:07:49:00.0
+Source: 2312-319
+Scan 9 started at 17DEC24:07:51:40.0
+Source: b_501
+Source: b_502
+Source: b_503
+Source: b_504
+Source: b_505
+Source: b_506
+Source: b_507
+Source: b_508
+Source: b_509
+Source: b_510
+Source: b_511
+Source: b_512
+Source: b_513
+Source: b_514
+Source: b_515
+Source: b_516
+Source: b_517
+Source: b_518
+Source: b_519
+Source: b_520
+Scan 10 started at 17DEC24:08:05:16.0
+Source: 2312-319
+Scan 11 started at 17DEC24:08:08:12.0
+Source: b_521
+Source: b_522
+Source: b_523
+Source: b_524
+Source: b_525
+Source: b_526
+Source: b_527
+Source: b_528
+Source: b_529
+Source: b_530
+Source: b_531
+Source: b_532
+Source: b_533
+Source: b_534
+Source: b_535
+Source: b_536
+Source: b_537
+Source: b_538
+Source: b_539
+Source: b_540
+Scan 12 started at 17DEC24:08:21:24.0
+Source: 2312-319
+Scan 13 started at 17DEC24:08:24:12.0
+Source: b_541
+Source: b_542
+Source: b_543
+Source: b_544
+Source: b_545
+Source: b_546
+Source: b_547
+Source: b_548
+Source: b_549
+Source: b_550
+Source: b_551
+Source: b_552
+Source: b_553
+Source: b_554
+Source: b_555
+Source: b_556
+Source: b_557
+Source: b_558
+Source: b_559
+Source: b_560
+Scan 14 started at 17DEC24:08:37:32.0
+Source: 2312-319
+Scan 15 started at 17DEC24:08:40:20.0
+Source: b_561
+Source: b_562
+Source: b_563
+Source: b_564
+Source: b_565
+Source: b_566
+Source: b_567
+Source: b_568
+Source: b_569
+Source: b_570
+Source: b_571
+Source: b_572
+Source: b_573
+Source: b_574
+Source: b_575
+Source: b_576
+Source: b_577
+Source: b_578
+Source: b_579
+Source: b_580
+Scan 16 started at 17DEC24:08:53:48.0
+Source: 2312-319
+Scan 17 started at 17DEC24:08:56:36.0
+Source: b_581
+Source: b_582
+Source: b_583
+Source: b_584
+Source: b_585
+Source: b_586
+Source: b_587
+Source: b_588
+Source: b_589
+Source: b_590
+Source: b_591
+Source: b_592
+Source: b_593
+Source: b_594
+Source: b_595
+Source: b_596
+Source: b_597
+Source: b_598
+Source: b_599
+Source: b_600
+Scan 18 started at 17DEC24:09:09:56.0
+Source: 2312-319
+Scan 19 started at 17DEC24:09:12:44.0
+Source: b_601
+Source: b_602
+Source: b_603
+Source: b_604
+Source: b_605
+Source: b_606
+Source: b_607
+Source: b_608
+Source: b_609
+Source: b_610
+Source: b_611
+Source: b_612
+Source: b_613
+Source: b_614
+Source: b_615
+Source: b_616
+Source: b_617
+Source: b_618
+Source: b_619
+Source: b_620
+Scan 20 started at 17DEC24:09:26:04.0
+Source: 2312-319
+Scan 21 started at 17DEC24:09:28:44.0
+Source: b_621
+Source: b_622
+Source: b_623
+Source: b_624
+Source: b_625
+Source: b_626
+Source: b_627
+Source: b_628
+Source: b_629
+Source: b_630
+Source: b_631
+Source: b_632
+Source: b_633
+Source: b_634
+Source: b_635
+Source: b_636
+Source: b_637
+RPFITS file version is 2.12
+---------------------------------------
+Total number of spectra selected: 72660
+
+Summary of spectra flagged
+Flagging Reason            Fraction
+---------------            --------
+Antenna off-source/off-line  12.0%
+---------------------------------------
+Processing file raw/2017-12-24_0939.C3132
+CABB data detected
+Scan 1 started at 17DEC24:09:39:40.0
+Source: b_637
+Source: b_638
+Source: b_639
+Source: b_640
+Scan 2 started at 17DEC24:09:42:12.0
+Source: 2312-319
+Scan 3 started at 17DEC24:09:44:52.0
+Source: b_641
+ 10:30:58 CAOBS> start 17/99
+Scan 4 started at 17DEC24:10:35:16.0
+Source: 2312-319
+Scan 5 started at 17DEC24:10:37:56.0
+Source: b_641
+Source: b_642
+Source: b_643
+Source: b_644
+Source: b_645
+Source: b_646
+Source: b_647
+Source: b_648
+Source: b_649
+Source: b_650
+Source: b_651
+Source: b_652
+Source: b_653
+Source: b_654
+Source: b_655
+Source: b_656
+Source: b_657
+Source: b_658
+Source: b_659
+Source: b_660
+Scan 6 started at 17DEC24:10:51:24.0
+Source: 2312-319
+Scan 7 started at 17DEC24:10:54:12.0
+Source: b_661
+Source: b_662
+Source: b_663
+Source: b_664
+Source: b_665
+Source: b_666
+Source: b_667
+Source: b_668
+Source: b_669
+Source: b_670
+Source: b_671
+Source: b_672
+Source: b_673
+Source: b_674
+Source: b_675
+Source: b_676
+Source: b_677
+Source: b_678
+Source: b_679
+Source: b_680
+Scan 8 started at 17DEC24:11:07:32.0
+Source: 2312-319
+Scan 9 started at 17DEC24:11:10:12.0
+Source: b_681
+Source: b_682
+Source: b_683
+Source: b_684
+Source: b_685
+Source: b_686
+Source: b_687
+Source: b_688
+Source: b_689
+Source: b_690
+Source: b_691
+Source: b_692
+Source: b_693
+Source: b_694
+Source: b_695
+Source: b_696
+Source: b_697
+Source: b_698
+Source: b_699
+Source: b_700
+Scan 10 started at 17DEC24:11:23:40.0
+Source: 2312-319
+Scan 11 started at 17DEC24:11:26:20.0
+Source: b_701
+Source: b_702
+Source: b_703
+Source: b_704
+Source: b_705
+Source: b_706
+Source: b_707
+Source: b_708
+Source: b_709
+Source: b_710
+Source: b_711
+Source: b_712
+Source: b_713
+Source: b_714
+Source: b_715
+Source: b_716
+Source: b_717
+Source: b_718
+Source: b_719
+Source: b_720
+Scan 12 started at 17DEC24:11:39:48.0
+Source: 2312-319
+Scan 13 started at 17DEC24:11:42:28.0
+Source: b_481
+Source: b_482
+Source: b_483
+Source: b_484
+Source: b_485
+Source: b_486
+Source: b_487
+Source: b_488
+Source: b_489
+Source: b_490
+Source: b_491
+Source: b_492
+Source: b_493
+Source: b_494
+Source: b_495
+Source: b_496
+Source: b_497
+Source: b_498
+Source: b_499
+Source: b_500
+Scan 14 started at 17DEC24:11:55:56.0
+Source: 2312-319
+Scan 15 started at 17DEC24:11:58:36.0
+Source: b_501
+Source: b_502
+Source: b_503
+Source: b_504
+Source: b_505
+Source: b_506
+Source: b_507
+Source: b_508
+Source: b_509
+Source: b_510
+Source: b_511
+Source: b_512
+Source: b_513
+Source: b_514
+Source: b_515
+Source: b_516
+Source: b_517
+Source: b_518
+Source: b_519
+Source: b_520
+Scan 16 started at 17DEC24:12:12:04.0
+Source: 2312-319
+Scan 17 started at 17DEC24:12:14:44.0
+Source: b_521
+Source: b_522
+Source: b_523
+Source: b_524
+Source: b_525
+Source: b_526
+Source: b_527
+Source: b_528
+Source: b_529
+Source: b_530
+Source: b_531
+Source: b_532
+Source: b_533
+Source: b_534
+Source: b_535
+Source: b_536
+Source: b_537
+Source: b_538
+Source: b_539
+Source: b_540
+Scan 18 started at 17DEC24:12:28:12.0
+Source: 2312-319
+Scan 19 started at 17DEC24:12:30:52.0
+Source: b_541
+Source: b_542
+Source: b_543
+Source: b_544
+Source: b_545
+Source: b_546
+Source: b_547
+Source: b_548
+Source: b_549
+Source: b_550
+Source: b_551
+Source: b_552
+Source: b_553
+Source: b_554
+Source: b_555
+Source: b_556
+Source: b_557
+Source: b_558
+Source: b_559
+Source: b_560
+Scan 20 started at 17DEC24:12:44:20.0
+Source: 2312-319
+Scan 21 started at 17DEC24:12:47:00.0
+Source: b_561
+Source: b_562
+Source: b_563
+Source: b_564
+Source: b_565
+Source: b_566
+Source: b_567
+Source: b_568
+Source: b_569
+Source: b_570
+Source: b_571
+Source: b_572
+Source: b_573
+Source: b_574
+Source: b_575
+Source: b_576
+Source: b_577
+Source: b_578
+Source: b_579
+Source: b_580
+Scan 22 started at 17DEC24:13:00:28.0
+Source: 2312-319
+ 13:02:27 CAOBS> stop
+ 13:02:40 CAOBS> corr close file
+RPFITS file version is 2.12
+---------------------------------------
+Total number of spectra selected: 68040
+
+Summary of spectra flagged
+Flagging Reason            Fraction
+---------------            --------
+Antenna off-source/off-line  5.61%
+---------------------------------------
+
+No CACAL data was detected
+
+2018-08-08 05:48:01,039 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,50,850,1 flagval=flag
+
+uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
+
+
+Set flags to indicate bad data in visibility file data9.uv
+Linetype channel; select   50 channels; start  850, width    1, step    1
+
+Overview of flagging on visibility file data9.uv
+Changed flags set to FALSE (data flagged as bad)
+Total number of records selected: 261988; out of 261988 records
+Antennas used: 1-6
+Counts of correlations within selected channels
+channel   Originally    Currently
+Good:        13099400.           0.    Changed to bad:    13099400.
+Bad:                0.    13099400.
+
+2018-08-08 05:48:38,756 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
+
+uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
+
+Creating 1934-638.9500
+Creating 2312-319.9500
+Creating b.9500
+
+2018-08-08 05:48:50,864 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8772360    8673192    Changed to bad:      99168
+ Bad:        1308720    1407888    Changed to good:         0
+ 14.0% of the data is now flagged
+
+2018-08-08 05:49:01,371 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8673192    8589816    Changed to bad:      83376
+ Bad:        1407888    1491264    Changed to good:         0
+ 14.8% of the data is now flagged
+
+2018-08-08 05:49:10,979 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8589816    8449352    Changed to bad:     140464
+ Bad:        1491264    1631728    Changed to good:         0
+ 16.2% of the data is now flagged
+
+2018-08-08 05:49:59,263 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
+Selecting parallel-hand polarisations
+Reading the data ...
+Number correlations accepted: 4224676
+Number of frequency bands/settings: 1
+Number of polarisations selected: 2
+Number of solution intervals: 82
+Number of passband solution intervals: 1
+Initialising ...
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using known frequency variation of 1934-638
+Generating initial solution estimate ...
+Doing solution refinement ...
+Iter= 1, Solution Error:  0.455
+Iter= 2, Solution Error:  0.022
+Iter= 3, Solution Error:  0.000
+Saving solution ...
+
+2018-08-08 05:50:00,165 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+
+gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Number of antennae: 6
+Reading the data ...
+Number of solution intervals: 82
+Total visibilities read: 1230
+Number visibilities accepted: 1230
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.5359,  0.0000,  0.0000,  0.0000 at   9.4671 GHz.
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.6946,  0.0000,  0.0000,  0.0000 at   9.0161 GHz.
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.3859,  0.0000,  0.0000,  0.0000 at   9.9447 GHz.
+Iter= 1, Amplit/Phase Solution Error:   1.296
+Iter= 1, Polarisation Solution Error:   0.034
+Iter= 1, Overall Solution Error:        2.098
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.5359
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00255,-0.00489),(-0.00070,-0.00558)
+ Ant 2:Dx,Dy = ( 0.00326, 0.00100),(-0.00187, 0.00081)
+ Ant 3:Dx,Dy = ( 0.00347, 0.00346),(-0.00838, 0.00351)
+ Ant 4:Dx,Dy = ( 0.00328, 0.01611),(-0.00133, 0.01625)
+ Ant 5:Dx,Dy = (-0.01637, 0.00236),( 0.01659, 0.00206)
+ Ant 6:Dx,Dy = ( 0.00447,-0.01756),(-0.00366,-0.01753)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.310
+Iter= 1, Polarisation Solution Error:   0.034
+Iter= 1, Overall Solution Error:        2.096
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.6946
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00303,-0.00414),(-0.00125,-0.00498)
+ Ant 2:Dx,Dy = ( 0.00366, 0.00231),(-0.00144, 0.00156)
+ Ant 3:Dx,Dy = ( 0.00433, 0.00325),(-0.00619, 0.00402)
+ Ant 4:Dx,Dy = ( 0.00227, 0.01622),(-0.00013, 0.01613)
+ Ant 5:Dx,Dy = (-0.01682, 0.00034),( 0.01663, 0.00022)
+ Ant 6:Dx,Dy = ( 0.00575,-0.01740),(-0.00540,-0.01754)
+Solution for freq bin  2
+Iter= 1, Amplit/Phase Solution Error:   1.280
+Iter= 1, Polarisation Solution Error:   0.034
+Iter= 1, Overall Solution Error:        2.102
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.3859
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00202,-0.00574),(-0.00008,-0.00625)
+ Ant 2:Dx,Dy = ( 0.00284,-0.00050),(-0.00236,-0.00003)
+ Ant 3:Dx,Dy = ( 0.00249, 0.00370),(-0.01089, 0.00292)
+ Ant 4:Dx,Dy = ( 0.00444, 0.01597),(-0.00273, 0.01637)
+ Ant 5:Dx,Dy = (-0.01588, 0.00462),( 0.01656, 0.00413)
+ Ant 6:Dx,Dy = ( 0.00295,-0.01772),(-0.00163,-0.01748)
+
+2018-08-08 05:50:15,889 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Applying freq. dependent gain corrections to 1934-638.9500
+Applying freq. dependent leakage correction to 1934-638.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8449352    8419524    Changed to bad:      29828
+ Bad:        1631728    1661556    Changed to good:         0
+ 16.5% of the data is now flagged
+
+2018-08-08 05:50:38,116 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Applying freq. dependent gain corrections to 1934-638.9500
+Applying freq. dependent leakage correction to 1934-638.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8419524    8388452    Changed to bad:      31072
+ Bad:        1661556    1692628    Changed to good:         0
+ 16.8% of the data is now flagged
+
+2018-08-08 05:50:59,643 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Applying freq. dependent gain corrections to 1934-638.9500
+Applying freq. dependent leakage correction to 1934-638.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:       8388452    8362176    Changed to bad:      26276
+ Bad:        1692628    1718904    Changed to good:         0
+ 17.1% of the data is now flagged
+
+2018-08-08 05:51:51,594 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
+Selecting parallel-hand polarisations
+Reading the data ...
+Number correlations accepted: 4181088
+Number of frequency bands/settings: 1
+Number of polarisations selected: 2
+Number of solution intervals: 82
+Number of passband solution intervals: 1
+Initialising ...
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using known frequency variation of 1934-638
+Generating initial solution estimate ...
+Doing solution refinement ...
+Iter= 1, Solution Error:  0.460
+Iter= 2, Solution Error:  0.021
+Iter= 3, Solution Error:  0.000
+Saving solution ...
+
+2018-08-08 05:51:52,381 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+
+gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
+
+Applying bandpass corrections to 1934-638.9500
+Number of antennae: 6
+Using leakage parameters from input as initial guess
+Reading the data ...
+Number of solution intervals: 82
+Total visibilities read: 1230
+Number visibilities accepted: 1230
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.5361,  0.0000,  0.0000,  0.0000 at   9.4665 GHz.
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.6941,  0.0000,  0.0000,  0.0000 at   9.0176 GHz.
+Using post-Aug94 ATCA flux scale for 1934-638.
+Using IQUV =  2.3869,  0.0000,  0.0000,  0.0000 at   9.9414 GHz.
+Iter= 1, Amplit/Phase Solution Error:   1.295
+Iter= 1, Polarisation Solution Error:   0.000
+Iter= 1, Overall Solution Error:        2.099
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.5361
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00255,-0.00490),(-0.00070,-0.00558)
+ Ant 2:Dx,Dy = ( 0.00328, 0.00099),(-0.00186, 0.00079)
+ Ant 3:Dx,Dy = ( 0.00349, 0.00344),(-0.00838, 0.00351)
+ Ant 4:Dx,Dy = ( 0.00329, 0.01612),(-0.00134, 0.01626)
+ Ant 5:Dx,Dy = (-0.01640, 0.00241),( 0.01661, 0.00213)
+ Ant 6:Dx,Dy = ( 0.00445,-0.01760),(-0.00367,-0.01756)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.308
+Iter= 1, Polarisation Solution Error:   0.003
+Iter= 1, Overall Solution Error:        2.098
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.6941
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00304,-0.00415),(-0.00124,-0.00500)
+ Ant 2:Dx,Dy = ( 0.00369, 0.00231),(-0.00142, 0.00152)
+ Ant 3:Dx,Dy = ( 0.00436, 0.00322),(-0.00619, 0.00400)
+ Ant 4:Dx,Dy = ( 0.00231, 0.01623),(-0.00015, 0.01613)
+ Ant 5:Dx,Dy = (-0.01687, 0.00043),( 0.01665, 0.00034)
+ Ant 6:Dx,Dy = ( 0.00572,-0.01745),(-0.00540,-0.01758)
+Solution for freq bin  2
+Iter= 1, Amplit/Phase Solution Error:   1.280
+Iter= 1, Polarisation Solution Error:   0.003
+Iter= 1, Overall Solution Error:        2.103
+Iter= 2, Amplit/Phase Solution Error:   0.002
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.003
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   2.3869
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00202,-0.00574),(-0.00009,-0.00624)
+ Ant 2:Dx,Dy = ( 0.00284,-0.00051),(-0.00236,-0.00003)
+ Ant 3:Dx,Dy = ( 0.00249, 0.00371),(-0.01090, 0.00294)
+ Ant 4:Dx,Dy = ( 0.00443, 0.01599),(-0.00274, 0.01638)
+ Ant 5:Dx,Dy = (-0.01588, 0.00462),( 0.01657, 0.00412)
+ Ant 6:Dx,Dy = ( 0.00295,-0.01774),(-0.00164,-0.01750)
+
+2018-08-08 05:51:52,818 [MainThread  ] [INFO ]  gpcopy vis=1934-638.9500 out=2312-319.9500
+
+gpcopy: Revision 1.13, 2015/10/29 01:31:39 UTC
+
+Copying leakage table
+Copying gain table
+Interpolation tolerance set to (minutes): 720.00
+Copying bandpass table
+
+2018-08-08 05:54:26,544 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      64230792   63736416    Changed to bad:     494376
+ Bad:        9582384   10076760    Changed to good:         0
+ 13.7% of the data is now flagged
+
+2018-08-08 05:56:51,016 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      63736416   63305848    Changed to bad:     430568
+ Bad:       10076760   10507328    Changed to good:         0
+ 14.2% of the data is now flagged
+
+2018-08-08 05:59:46,142 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      63305848   62886392    Changed to bad:     419456
+ Bad:       10507328   10926784    Changed to good:         0
+ 14.8% of the data is now flagged
+
+2018-08-08 05:59:59,184 [MainThread  ] [INFO ]  gpcal vis=2312-319.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
+
+gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Number of antennae: 6
+Using leakage parameters from input as initial guess
+Reading the data ...
+Number of solution intervals: 601
+Total visibilities read: 9006
+Number visibilities accepted: 9006
+Iter= 1, Amplit/Phase Solution Error:   1.393
+Iter= 1, Polarisation Solution Error:   0.003
+Iter= 1, Overall Solution Error:        2.619
+Iter= 2, Amplit/Phase Solution Error:   0.004
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.005
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   0.5551
+Percent Q:   0.339
+Percent U:  -0.208
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00194,-0.00570),(-0.00047,-0.00550)
+ Ant 2:Dx,Dy = ( 0.00324, 0.00029),(-0.00186, 0.00134)
+ Ant 3:Dx,Dy = ( 0.00322, 0.00301),(-0.00900, 0.00380)
+ Ant 4:Dx,Dy = ( 0.00280, 0.01566),(-0.00121, 0.01661)
+ Ant 5:Dx,Dy = (-0.01572, 0.00218),( 0.01632, 0.00285)
+ Ant 6:Dx,Dy = ( 0.00484,-0.01763),(-0.00346,-0.01691)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.382
+Iter= 1, Polarisation Solution Error:   0.003
+Iter= 1, Overall Solution Error:        2.586
+Iter= 2, Amplit/Phase Solution Error:   0.003
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.005
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   0.5611
+Percent Q:   0.283
+Percent U:  -0.071
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00241,-0.00483),(-0.00114,-0.00526)
+ Ant 2:Dx,Dy = ( 0.00366, 0.00168),(-0.00168, 0.00206)
+ Ant 3:Dx,Dy = ( 0.00421, 0.00331),(-0.00613, 0.00476)
+ Ant 4:Dx,Dy = ( 0.00172, 0.01576),( 0.00011, 0.01641)
+ Ant 5:Dx,Dy = (-0.01579,-0.00025),( 0.01634, 0.00071)
+ Ant 6:Dx,Dy = ( 0.00609,-0.01754),(-0.00521,-0.01681)
+Solution for freq bin  2
+Iter= 1, Amplit/Phase Solution Error:   1.391
+Iter= 1, Polarisation Solution Error:   0.004
+Iter= 1, Overall Solution Error:        2.662
+Iter= 2, Amplit/Phase Solution Error:   0.005
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.006
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+I flux density:   0.5551
+Percent Q:   0.384
+Percent U:  -0.339
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00153,-0.00658),( 0.00021,-0.00578)
+ Ant 2:Dx,Dy = ( 0.00293,-0.00112),(-0.00197, 0.00059)
+ Ant 3:Dx,Dy = ( 0.00223, 0.00277),(-0.01178, 0.00303)
+ Ant 4:Dx,Dy = ( 0.00383, 0.01551),(-0.00238, 0.01687)
+ Ant 5:Dx,Dy = (-0.01528, 0.00450),( 0.01668, 0.00486)
+ Ant 6:Dx,Dy = ( 0.00374,-0.01802),(-0.00178,-0.01664)
+
+2018-08-08 06:02:35,603 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      62886392   62450904    Changed to bad:     435488
+ Bad:       10926784   11362272    Changed to good:         0
+ 15.4% of the data is now flagged
+
+2018-08-08 06:04:49,341 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      62450904   62091456    Changed to bad:     359448
+ Bad:       11362272   11721720    Changed to good:         0
+ 15.9% of the data is now flagged
+
+2018-08-08 06:07:08,490 [MainThread  ] [INFO ]  pgflag vis=2312-319.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Applying freq. dependent gain corrections to 2312-319.9500
+Applying freq. dependent leakage correction to 2312-319.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:      62091456   61770328    Changed to bad:     321128
+ Bad:       11721720   12042848    Changed to good:         0
+ 16.3% of the data is now flagged
+
+2018-08-08 06:07:12,354 [MainThread  ] [INFO ]  gpcal vis=2312-319.9500 refant=4 interval=0.1 nfbin=2 options=xyvary,qusolve
+
+gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
+
+Applying bandpass corrections to 2312-319.9500
+Number of antennae: 6
+Using leakage parameters from input as initial guess
+Reading the data ...
+Number of solution intervals: 601
+Total visibilities read: 9006
+Number visibilities accepted: 8995
+Iter= 1, Amplit/Phase Solution Error:   1.401
+Iter= 1, Polarisation Solution Error:   0.004
+Iter= 1, Overall Solution Error:        2.619
+Iter= 2, Amplit/Phase Solution Error:   0.005
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.005
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+Iter= 4, Amplit/Phase Solution Error:   0.000
+Iter= 4, Polarisation Solution Error:   0.000
+Iter= 4, Overall Solution Error:        0.000
+I flux density:   0.5665
+Percent Q:   0.353
+Percent U:  -0.208
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00188,-0.00570),(-0.00050,-0.00547)
+ Ant 2:Dx,Dy = ( 0.00316, 0.00030),(-0.00194, 0.00135)
+ Ant 3:Dx,Dy = ( 0.00317, 0.00305),(-0.00906, 0.00380)
+ Ant 4:Dx,Dy = ( 0.00273, 0.01569),(-0.00129, 0.01661)
+ Ant 5:Dx,Dy = (-0.01579, 0.00224),( 0.01626, 0.00290)
+ Ant 6:Dx,Dy = ( 0.00481,-0.01774),(-0.00351,-0.01702)
+Solution for freq bin  1
+Iter= 1, Amplit/Phase Solution Error:   1.381
+Iter= 1, Polarisation Solution Error:   0.003
+Iter= 1, Overall Solution Error:        2.587
+Iter= 2, Amplit/Phase Solution Error:   0.003
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.005
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+Iter= 4, Amplit/Phase Solution Error:   0.000
+Iter= 4, Polarisation Solution Error:   0.000
+Iter= 4, Overall Solution Error:        0.000
+I flux density:   0.5726
+Percent Q:   0.302
+Percent U:  -0.072
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00232,-0.00482),(-0.00119,-0.00522)
+ Ant 2:Dx,Dy = ( 0.00355, 0.00171),(-0.00183, 0.00205)
+ Ant 3:Dx,Dy = ( 0.00413, 0.00334),(-0.00621, 0.00476)
+ Ant 4:Dx,Dy = ( 0.00163, 0.01581),( 0.00003, 0.01639)
+ Ant 5:Dx,Dy = (-0.01591,-0.00021),( 0.01622, 0.00077)
+ Ant 6:Dx,Dy = ( 0.00600,-0.01768),(-0.00532,-0.01691)
+Solution for freq bin  2
+Iter= 1, Amplit/Phase Solution Error:   1.393
+Iter= 1, Polarisation Solution Error:   0.004
+Iter= 1, Overall Solution Error:        2.660
+Iter= 2, Amplit/Phase Solution Error:   0.006
+Iter= 2, Polarisation Solution Error:   0.000
+Iter= 2, Overall Solution Error:        0.006
+Iter= 3, Amplit/Phase Solution Error:   0.001
+Iter= 3, Polarisation Solution Error:   0.000
+Iter= 3, Overall Solution Error:        0.001
+Iter= 4, Amplit/Phase Solution Error:   0.000
+Iter= 4, Polarisation Solution Error:   0.000
+Iter= 4, Overall Solution Error:        0.000
+I flux density:   0.5666
+Percent Q:   0.396
+Percent U:  -0.337
+Leakage terms:
+ Ant 1:Dx,Dy = ( 0.00147,-0.00657),( 0.00016,-0.00576)
+ Ant 2:Dx,Dy = ( 0.00287,-0.00111),(-0.00202, 0.00063)
+ Ant 3:Dx,Dy = ( 0.00219, 0.00279),(-0.01183, 0.00304)
+ Ant 4:Dx,Dy = ( 0.00375, 0.01553),(-0.00245, 0.01688)
+ Ant 5:Dx,Dy = (-0.01531, 0.00454),( 0.01666, 0.00488)
+ Ant 6:Dx,Dy = ( 0.00376,-0.01810),(-0.00179,-0.01676)
+
+2018-08-08 06:07:12,413 [MainThread  ] [INFO ]  gpboot vis=2312-319.9500 cal=1934-638.9500
+
+gpboot: Revision 1.9, 2015/10/29 01:31:30 UTC
+
+Secondary flux density scaled by:   0.961
+Frequency bin  1 scaled by      :   0.959
+Frequency bin  2 scaled by      :   0.964
+
+2018-08-08 06:08:22,458 [MainThread  ] [INFO ]  gpcopy vis=2312-319.9500 out=b.9500
+
+gpcopy: Revision 1.13, 2015/10/29 01:31:39 UTC
+
+Copying leakage table
+Copying gain table
+Interpolation tolerance set to (minutes): 720.00
+Copying bandpass table
+
+2018-08-08 06:22:37,715 [MainThread  ] [INFO ]  pgflag vis=b.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to b.9500
+Applying freq. dependent gain corrections to b.9500
+Applying freq. dependent leakage correction to b.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:     394121452  382622060    Changed to bad:   11499392
+ Bad:       58797704   70297096    Changed to good:         0
+ 15.5% of the data is now flagged
+
+2018-08-08 06:36:43,859 [MainThread  ] [INFO ]  pgflag vis=b.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to b.9500
+Applying freq. dependent gain corrections to b.9500
+Applying freq. dependent leakage correction to b.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:     382622060  374273096    Changed to bad:    8348964
+ Bad:       70297096   78646060    Changed to good:         0
+ 17.4% of the data is now flagged
+
+2018-08-08 06:41:24,193 [MainThread  ] [INFO ]  uvsplit vis=b.9500
+
+uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
+
+Creating b_541.9500
+Creating b_542.9500
+Creating b_543.9500
+Creating b_544.9500
+Creating b_545.9500
+Creating b_546.9500
+Creating b_547.9500
+Creating b_548.9500
+Creating b_549.9500
+Creating b_550.9500
+Creating b_551.9500
+Creating b_552.9500
+Creating b_553.9500
+Creating b_554.9500
+Creating b_555.9500
+Creating b_556.9500
+Creating b_557.9500
+Creating b_558.9500
+Creating b_559.9500
+Creating b_560.9500
+Creating b_561.9500
+Creating b_562.9500
+Creating b_563.9500
+Creating b_564.9500
+Creating b_565.9500
+Creating b_566.9500
+Creating b_567.9500
+Creating b_568.9500
+Creating b_569.9500
+Creating b_570.9500
+Creating b_571.9500
+Creating b_572.9500
+Creating b_573.9500
+Creating b_574.9500
+Creating b_575.9500
+Creating b_576.9500
+Creating b_577.9500
+Creating b_578.9500
+Creating b_579.9500
+Creating b_580.9500
+Creating b_581.9500
+Creating b_582.9500
+Creating b_583.9500
+Creating b_584.9500
+Creating b_585.9500
+Creating b_586.9500
+Creating b_587.9500
+Creating b_588.9500
+Creating b_589.9500
+Creating b_590.9500
+Creating b_591.9500
+Creating b_592.9500
+Creating b_593.9500
+Creating b_594.9500
+Creating b_595.9500
+Creating b_596.9500
+Creating b_597.9500
+Creating b_598.9500
+Creating b_599.9500
+Creating b_600.9500
+Creating b_601.9500
+Creating b_602.9500
+Creating b_603.9500
+Creating b_604.9500
+Creating b_605.9500
+Creating b_606.9500
+Creating b_607.9500
+Creating b_608.9500
+Creating b_609.9500
+Creating b_610.9500
+Creating b_611.9500
+Creating b_612.9500
+Creating b_613.9500
+Creating b_614.9500
+Creating b_615.9500
+Creating b_616.9500
+Creating b_617.9500
+Creating b_618.9500
+Creating b_619.9500
+Creating b_620.9500
+Creating b_621.9500
+Creating b_622.9500
+Creating b_623.9500
+Creating b_624.9500
+Creating b_625.9500
+Creating b_626.9500
+Creating b_627.9500
+Creating b_628.9500
+Creating b_629.9500
+Creating b_630.9500
+Creating b_631.9500
+Creating b_632.9500
+Creating b_633.9500
+Creating b_634.9500
+Creating b_635.9500
+Creating b_636.9500
+Creating b_637.9500
+Creating b_638.9500
+Creating b_639.9500
+Creating b_640.9500
+Creating b_641.9500
+Creating b_642.9500
+Creating b_643.9500
+Creating b_644.9500
+Creating b_645.9500
+Creating b_646.9500
+Creating b_647.9500
+Creating b_648.9500
+Creating b_649.9500
+Creating b_650.9500
+Creating b_651.9500
+Creating b_652.9500
+Creating b_653.9500
+Creating b_654.9500
+Creating b_655.9500
+Creating b_656.9500
+Creating b_657.9500
+Creating b_658.9500
+Creating b_659.9500
+Creating b_660.9500
+Creating b_661.9500
+Creating b_662.9500
+Creating b_663.9500
+Creating b_664.9500
+Creating b_665.9500
+Creating b_666.9500
+Creating b_667.9500
+Creating b_668.9500
+Creating b_669.9500
+Creating b_670.9500
+Creating b_671.9500
+Creating b_672.9500
+Creating b_673.9500
+Creating b_674.9500
+Creating b_675.9500
+Creating b_676.9500
+Creating b_677.9500
+Creating b_678.9500
+Creating b_679.9500
+Creating b_680.9500
+Creating b_681.9500
+Creating b_682.9500
+Creating b_683.9500
+Creating b_684.9500
+Creating b_685.9500
+Creating b_686.9500
+Creating b_687.9500
+Creating b_688.9500
+Creating b_689.9500
+Creating b_690.9500
+Creating b_691.9500
+Creating b_692.9500
+Creating b_693.9500
+Creating b_694.9500
+Creating b_695.9500
+Creating b_696.9500
+Creating b_697.9500
+Creating b_698.9500
+Creating b_699.9500
+Creating b_700.9500
+Creating b_701.9500
+Creating b_702.9500
+Creating b_703.9500
+Creating b_704.9500
+Creating b_705.9500
+Creating b_706.9500
+Creating b_707.9500
+Creating b_708.9500
+Creating b_709.9500
+Creating b_710.9500
+Creating b_711.9500
+Creating b_712.9500
+Creating b_713.9500
+Creating b_714.9500
+Creating b_715.9500
+Creating b_716.9500
+Creating b_717.9500
+Creating b_718.9500
+Creating b_719.9500
+Creating b_720.9500
+Creating b_481.9500
+Creating b_482.9500
+Creating b_483.9500
+Creating b_484.9500
+Creating b_485.9500
+Creating b_486.9500
+Creating b_487.9500
+Creating b_488.9500
+Creating b_489.9500
+Creating b_490.9500
+Creating b_491.9500
+Creating b_492.9500
+Creating b_493.9500
+Creating b_494.9500
+Creating b_495.9500
+Creating b_496.9500
+Creating b_497.9500
+Creating b_498.9500
+Creating b_499.9500
+Creating b_500.9500
+Creating b_501.9500
+Creating b_502.9500
+Creating b_503.9500
+Creating b_504.9500
+Creating b_505.9500
+Creating b_506.9500
+Creating b_507.9500
+Creating b_508.9500
+Creating b_509.9500
+Creating b_510.9500
+Creating b_511.9500
+Creating b_512.9500
+Creating b_513.9500
+Creating b_514.9500
+Creating b_515.9500
+Creating b_516.9500
+Creating b_517.9500
+Creating b_518.9500
+Creating b_519.9500
+Creating b_520.9500
+Creating b_521.9500
+Creating b_522.9500
+Creating b_523.9500
+Creating b_524.9500
+Creating b_525.9500
+Creating b_526.9500
+Creating b_527.9500
+Creating b_528.9500
+Creating b_529.9500
+Creating b_530.9500
+Creating b_531.9500
+Creating b_532.9500
+Creating b_533.9500
+Creating b_534.9500
+Creating b_535.9500
+Creating b_536.9500
+Creating b_537.9500
+Creating b_538.9500
+Creating b_539.9500
+Creating b_540.9500
+
