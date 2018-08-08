@@ -117,6 +117,7 @@ def derive_obs_sources(uvsplit, freq):
     primary_srcs = ['1934-638']
     secondary_srcs = ['2245-328', '2312-319']
     target_srcs = ['a','b','c','d','e','f']
+    ignore_srcs = ['2333-528','0823-500','0537-441','1921-293']
 
     freq = f"{freq}"
 
@@ -134,6 +135,8 @@ def derive_obs_sources(uvsplit, freq):
                 secondary = f"{src}.{freq}"
             elif src in target_srcs:
                 targets.append(f"{src}.{freq}")
+            elif src in ignore_srcs:
+                pass
             else:
                 # Assume it is a mosaic source target
                 targets.append(f"{src}.{freq}")
