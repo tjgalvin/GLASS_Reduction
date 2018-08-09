@@ -76,7 +76,9 @@ logger.log(logging.INFO, gpcal)
 gpcopy = m(f"gpcopy vis={primary} out={secondary}").run()
 logger.log(logging.INFO, gpcopy)
 
-mu.calibrator_pgflag(secondary)
+# Initial round of flagging on secondary is hanging. 900+ minutes. 
+# Try calibration first
+#mu.calibrator_pgflag(secondary)
 
 gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)

@@ -43,7 +43,7 @@ logger.log(logging.INFO, atlod)
 mu.uvflag(atlod.out, mu.flags_9)
 
 # Flag out very very low elevation with very little unflagged data
-uvflag = m(f"uvflag vis={atlod.out} flagval=flag select=time(12:59:45,15:00:00)").run()
+uvflag = m(f"uvflag vis={atlod.out} flagval=flag select=time(12:45:00,15:00:00)").run()
 logger.log(logging.INFO, uvflag)
 
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
