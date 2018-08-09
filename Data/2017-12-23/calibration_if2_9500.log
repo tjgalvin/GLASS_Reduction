@@ -1713,3 +1713,276 @@ Copying gain table
 Interpolation tolerance set to (minutes): 720.00
 Copying bandpass table
 
+2018-08-08 10:28:53,653 [MainThread  ] [INFO ]  pgflag vis=b.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to b.9500
+Applying freq. dependent gain corrections to b.9500
+Applying freq. dependent leakage correction to b.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:     452608000  438348292    Changed to bad:   14259708
+ Bad:       74148920   88408628    Changed to good:         0
+ 16.8% of the data is now flagged
+
+2018-08-08 10:42:51,347 [MainThread  ] [INFO ]  pgflag vis=b.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+
+pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
+
+Applying bandpass corrections to b.9500
+Applying freq. dependent gain corrections to b.9500
+Applying freq. dependent leakage correction to b.9500
+Applying changes to dataset
+Counts of correlations within selected channels:
+ channel  Originally  Currently
+ Good:     438348292  426924812    Changed to bad:   11423480
+ Bad:       88408628   99832108    Changed to good:         0
+ 19.0% of the data is now flagged
+
+2018-08-08 10:45:07,722 [MainThread  ] [INFO ]  uvsplit vis=b.9500
+
+uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
+
+Creating b_302.9500
+Creating b_303.9500
+Creating b_304.9500
+Creating b_301.9500
+Creating b_305.9500
+Creating b_306.9500
+Creating b_307.9500
+Creating b_308.9500
+Creating b_309.9500
+Creating b_310.9500
+Creating b_311.9500
+Creating b_312.9500
+Creating b_313.9500
+Creating b_314.9500
+Creating b_315.9500
+Creating b_316.9500
+Creating b_317.9500
+Creating b_318.9500
+Creating b_319.9500
+Creating b_320.9500
+Creating b_321.9500
+Creating b_322.9500
+Creating b_323.9500
+Creating b_324.9500
+Creating b_325.9500
+Creating b_326.9500
+Creating b_327.9500
+Creating b_328.9500
+Creating b_329.9500
+Creating b_330.9500
+Creating b_331.9500
+Creating b_332.9500
+Creating b_333.9500
+Creating b_334.9500
+Creating b_335.9500
+Creating b_336.9500
+Creating b_337.9500
+Creating b_338.9500
+Creating b_339.9500
+Creating b_340.9500
+Creating b_341.9500
+Creating b_342.9500
+Creating b_343.9500
+Creating b_344.9500
+Creating b_345.9500
+Creating b_346.9500
+Creating b_347.9500
+Creating b_348.9500
+Creating b_349.9500
+Creating b_350.9500
+Creating b_351.9500
+Creating b_352.9500
+Creating b_353.9500
+Creating b_354.9500
+Creating b_355.9500
+Creating b_356.9500
+Creating b_357.9500
+Creating b_358.9500
+Creating b_359.9500
+Creating b_360.9500
+Creating b_361.9500
+Creating b_362.9500
+Creating b_363.9500
+Creating b_364.9500
+Creating b_365.9500
+Creating b_366.9500
+Creating b_367.9500
+Creating b_368.9500
+Creating b_369.9500
+Creating b_370.9500
+Creating b_371.9500
+Creating b_372.9500
+Creating b_373.9500
+Creating b_374.9500
+Creating b_375.9500
+Creating b_376.9500
+Creating b_377.9500
+Creating b_378.9500
+Creating b_379.9500
+Creating b_380.9500
+Creating b_381.9500
+Creating b_382.9500
+Creating b_383.9500
+Creating b_384.9500
+Creating b_385.9500
+Creating b_386.9500
+Creating b_387.9500
+Creating b_388.9500
+Creating b_389.9500
+Creating b_390.9500
+Creating b_391.9500
+Creating b_392.9500
+Creating b_393.9500
+Creating b_394.9500
+Creating b_395.9500
+Creating b_396.9500
+Creating b_397.9500
+Creating b_398.9500
+Creating b_399.9500
+Creating b_400.9500
+Creating b_401.9500
+Creating b_402.9500
+Creating b_403.9500
+Creating b_404.9500
+Creating b_405.9500
+Creating b_406.9500
+Creating b_407.9500
+Creating b_408.9500
+Creating b_409.9500
+Creating b_410.9500
+Creating b_411.9500
+Creating b_412.9500
+Creating b_413.9500
+Creating b_414.9500
+Creating b_415.9500
+Creating b_416.9500
+Creating b_417.9500
+Creating b_418.9500
+Creating b_419.9500
+Creating b_420.9500
+Creating b_421.9500
+Creating b_422.9500
+Creating b_423.9500
+Creating b_424.9500
+Creating b_425.9500
+Creating b_426.9500
+Creating b_427.9500
+Creating b_428.9500
+Creating b_429.9500
+Creating b_430.9500
+Creating b_431.9500
+Creating b_432.9500
+Creating b_433.9500
+Creating b_434.9500
+Creating b_435.9500
+Creating b_441.9500
+Creating b_442.9500
+Creating b_443.9500
+Creating b_444.9500
+Creating b_445.9500
+Creating b_446.9500
+Creating b_447.9500
+Creating b_448.9500
+Creating b_449.9500
+Creating b_450.9500
+Creating b_451.9500
+Creating b_452.9500
+Creating b_453.9500
+Creating b_454.9500
+Creating b_455.9500
+Creating b_456.9500
+Creating b_457.9500
+Creating b_458.9500
+Creating b_459.9500
+Creating b_460.9500
+Creating b_461.9500
+Creating b_462.9500
+Creating b_463.9500
+Creating b_464.9500
+Creating b_465.9500
+Creating b_466.9500
+Creating b_467.9500
+Creating b_468.9500
+Creating b_469.9500
+Creating b_470.9500
+Creating b_471.9500
+Creating b_472.9500
+Creating b_473.9500
+Creating b_474.9500
+Creating b_475.9500
+Creating b_476.9500
+Creating b_477.9500
+Creating b_478.9500
+Creating b_479.9500
+Creating b_480.9500
+Creating b_241.9500
+Creating b_242.9500
+Creating b_243.9500
+Creating b_244.9500
+Creating b_245.9500
+Creating b_246.9500
+Creating b_247.9500
+Creating b_248.9500
+Creating b_249.9500
+Creating b_250.9500
+Creating b_251.9500
+Creating b_252.9500
+Creating b_253.9500
+Creating b_254.9500
+Creating b_255.9500
+Creating b_256.9500
+Creating b_257.9500
+Creating b_258.9500
+Creating b_259.9500
+Creating b_260.9500
+Creating b_261.9500
+Creating b_262.9500
+Creating b_263.9500
+Creating b_264.9500
+Creating b_265.9500
+Creating b_266.9500
+Creating b_267.9500
+Creating b_268.9500
+Creating b_269.9500
+Creating b_270.9500
+Creating b_271.9500
+Creating b_272.9500
+Creating b_273.9500
+Creating b_274.9500
+Creating b_275.9500
+Creating b_276.9500
+Creating b_277.9500
+Creating b_278.9500
+Creating b_279.9500
+Creating b_280.9500
+Creating b_281.9500
+Creating b_282.9500
+Creating b_283.9500
+Creating b_284.9500
+Creating b_285.9500
+Creating b_286.9500
+Creating b_287.9500
+Creating b_288.9500
+Creating b_289.9500
+Creating b_290.9500
+Creating b_291.9500
+Creating b_292.9500
+Creating b_293.9500
+Creating b_294.9500
+Creating b_295.9500
+Creating b_296.9500
+Creating b_297.9500
+Creating b_298.9500
+Creating b_299.9500
+Creating b_300.9500
+Creating b_436.9500
+Creating b_437.9500
+Creating b_438.9500
+Creating b_439.9500
+Creating b_440.9500
+
