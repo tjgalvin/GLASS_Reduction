@@ -1,4 +1,4 @@
-2018-11-02 14:12:24,207 [MainThread  ] [INFO ]  atlod in=raw/2018-10-10_0614.C3132,raw/2018-10-10_0901.C3132,raw/2018-10-10_1148.C3132,raw/2018-10-10_1434.C3132,raw/2018-10-10_1721.C3132 out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr
+2018-11-05 01:38:05,504 [MainThread  ] [INFO ]  atlod in=raw/2018-10-10_0614.C3132,raw/2018-10-10_0901.C3132,raw/2018-10-10_1148.C3132,raw/2018-10-10_1434.C3132,raw/2018-10-10_1721.C3132 out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr
 
 atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
 
@@ -1003,7 +1003,7 @@ Antenna off-source/off-line  3.35%
 
 No CACAL data was detected
 
-2018-11-02 14:13:14,915 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,6,1146,1 flagval=flag
+2018-11-05 01:41:06,801 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,6,1146,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -1020,7 +1020,7 @@ channel   Originally    Currently
 Good:          841176.           0.    Changed to bad:      841176.
 Bad:           841176.     1682352.
 
-2018-11-02 14:13:45,775 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,30,1454,1 flagval=flag
+2018-11-05 01:41:40,555 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,30,1454,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -1037,7 +1037,7 @@ channel   Originally    Currently
 Good:         8411760.           0.    Changed to bad:     8411760.
 Bad:                0.     8411760.
 
-2018-11-02 14:14:08,275 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,40,1964,1 flagval=flag
+2018-11-05 01:42:09,640 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,40,1964,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -1054,7 +1054,7 @@ channel   Originally    Currently
 Good:               0.           0.    Changed to bad:           0.
 Bad:         11215680.    11215680.
 
-2018-11-02 14:14:59,899 [MainThread  ] [INFO ]  uvsplit vis=data5.uv options=mosaic
+2018-11-05 01:42:46,103 [MainThread  ] [INFO ]  uvsplit vis=data5.uv options=mosaic
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
@@ -1062,4 +1062,4 @@ Creating 1934-638.5500
 Creating 2255-282.5500
 Creating c.5500
 
-2018-11-02 14:14:59,902 [MainThread  ] [ERROR]  Secondary is empty. Exiting.
+2018-11-05 01:42:46,104 [MainThread  ] [ERROR]  Secondary is empty. Exiting.

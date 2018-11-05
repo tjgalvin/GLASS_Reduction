@@ -1,4 +1,4 @@
-2018-11-02 14:50:18,462 [MainThread  ] [INFO ]  atlod in=raw/2018-10-19_0514.C3132,raw/2018-10-19_0802.C3132,raw/2018-10-19_1055.C3132,raw/2018-10-19_1342.C3132,raw/2018-10-19_1638.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
+2018-11-05 01:38:00,517 [MainThread  ] [INFO ]  atlod in=raw/2018-10-19_0514.C3132,raw/2018-10-19_0802.C3132,raw/2018-10-19_1055.C3132,raw/2018-10-19_1342.C3132,raw/2018-10-19_1638.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
 
 atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
 
@@ -998,7 +998,7 @@ Antenna off-source/off-line  2.63%
 
 No CACAL data was detected
 
-2018-11-02 14:50:41,808 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,65,850,1 flagval=flag
+2018-11-05 01:40:12,082 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,65,850,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -1015,7 +1015,7 @@ channel   Originally    Currently
 Good:        17999540.           0.    Changed to bad:    17999540.
 Bad:             7800.    18007340.
 
-2018-11-02 14:51:32,181 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
+2018-11-05 01:41:31,530 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
@@ -1023,4 +1023,4 @@ Creating 1934-638.9500
 Creating 2255-282.9500
 Creating c.9500
 
-2018-11-02 14:51:32,182 [MainThread  ] [ERROR]  Secondary is empty. Exiting.
+2018-11-05 01:41:31,532 [MainThread  ] [ERROR]  Secondary is empty. Exiting.

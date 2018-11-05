@@ -1,4 +1,4 @@
-2018-11-02 14:22:44,974 [MainThread  ] [INFO ]  atlod in=raw/2018-10-17_0551.C3132,raw/2018-10-17_1037.C3132,raw/2018-10-17_1324.C3132,raw/2018-10-17_1610.C3132 out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr
+2018-11-05 01:37:58,573 [MainThread  ] [INFO ]  atlod in=raw/2018-10-17_0551.C3132,raw/2018-10-17_1037.C3132,raw/2018-10-17_1324.C3132,raw/2018-10-17_1610.C3132 out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr
 
 atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
 
@@ -786,7 +786,7 @@ Antenna off-source/off-line  3.55%
 
 No CACAL data was detected
 
-2018-11-02 14:23:09,714 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,6,1146,1 flagval=flag
+2018-11-05 01:39:29,447 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,6,1146,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -803,7 +803,7 @@ channel   Originally    Currently
 Good:          649836.           0.    Changed to bad:      649836.
 Bad:           649836.     1299672.
 
-2018-11-02 14:23:22,939 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,30,1454,1 flagval=flag
+2018-11-05 01:40:11,310 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,30,1454,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -820,7 +820,7 @@ channel   Originally    Currently
 Good:         6498360.           0.    Changed to bad:     6498360.
 Bad:                0.     6498360.
 
-2018-11-02 14:23:39,647 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,40,1964,1 flagval=flag
+2018-11-05 01:40:34,471 [MainThread  ] [INFO ]  uvflag vis=data5.uv line=chan,40,1964,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -837,7 +837,7 @@ channel   Originally    Currently
 Good:               0.           0.    Changed to bad:           0.
 Bad:          8664480.     8664480.
 
-2018-11-02 14:24:33,956 [MainThread  ] [INFO ]  uvsplit vis=data5.uv options=mosaic
+2018-11-05 01:41:36,872 [MainThread  ] [INFO ]  uvsplit vis=data5.uv options=mosaic
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
@@ -845,4 +845,4 @@ Creating 1934-638.5500
 Creating 2255-282.5500
 Creating c.5500
 
-2018-11-02 14:24:33,958 [MainThread  ] [ERROR]  Secondary is empty. Exiting.
+2018-11-05 01:41:36,872 [MainThread  ] [ERROR]  Secondary is empty. Exiting.
