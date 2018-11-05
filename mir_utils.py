@@ -115,7 +115,7 @@ def derive_obs_sources(uvsplit, freq):
                       to get out a source from
     """
     primary_srcs = ['1934-638']
-    secondary_srcs = ['2245-328', '2312-319']
+    secondary_srcs = ['2245-328', '2312-319', '2255-282']
     target_srcs = ['a','b','c','d','e','f']
     ignore_srcs = ['2333-528','0823-500','0537-441','1921-293']
 
