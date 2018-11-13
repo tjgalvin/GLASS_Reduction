@@ -42,6 +42,10 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_9)
 
+# Flag out acal data
+uvflag = m(f"uvflag vis={atlod.out} select=time(13:00:00,15:40:00) flagval=flag").run()
+logger.log(logging.INFO, uvflag)
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
