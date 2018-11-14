@@ -42,6 +42,11 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_5)
 
+# Number of hardware issues reported in logs. Observer suggests this
+# time range
+uvflag = m(f"uvflag vis={atlod.out} select=time(14:11:00,15:16:00) flagval=flag").run()
+logger.log(logging.INFO, uvflag)
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 

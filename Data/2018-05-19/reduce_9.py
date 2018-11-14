@@ -42,6 +42,12 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_9)
 
+# Following seemed to only effect IF1. Keeping here for reference
+# # Block 4 went down
+# uvflag = m(f"uvflag vis={atlod.out} select=time(02:14:00,02:40:00) flagval=flag").run()
+# logger.log(logging.INFO, uvflag)
+
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 

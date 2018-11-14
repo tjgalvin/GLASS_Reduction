@@ -42,6 +42,11 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_5)
 
+# In log notes - weird phases on secondary, reset delays issued
+uvflag = m(f"uvflag vis={atlod.out} select=time(13:44:00,13:58:00) flagval=flag").run()
+logger.log(logging.INFO, uvflag)
+
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
