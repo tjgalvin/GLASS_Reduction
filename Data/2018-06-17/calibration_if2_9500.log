@@ -1,4 +1,4 @@
-2018-11-02 13:18:20,612 [MainThread  ] [INFO ]  atlod in=raw/2018-06-17_1424.C3132,raw/2018-06-17_1711.C3132,raw/2018-06-17_1858.C3132,raw/2018-06-17_2144.C3132,raw/2018-06-18_0031.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
+2018-11-14 03:59:03,260 [MainThread  ] [INFO ]  atlod in=raw/2018-06-17_1424.C3132,raw/2018-06-17_1711.C3132,raw/2018-06-17_1858.C3132,raw/2018-06-17_2144.C3132,raw/2018-06-18_0031.C3132 out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr
 
 atlod: Revision 1.53, 2016/08/25 23:02:21 UTC
 
@@ -949,7 +949,7 @@ Antenna off-source/off-line  4.33%
 
 No CACAL data was detected
 
-2018-11-02 13:18:42,712 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,65,850,1 flagval=flag
+2018-11-14 03:59:26,710 [MainThread  ] [INFO ]  uvflag vis=data9.uv line=chan,65,850,1 flagval=flag
 
 uvflag: Revision 1.8, 2014/09/30 14:23:39 UTC
 
@@ -966,7 +966,7 @@ channel   Originally    Currently
 Good:        16817838.           0.    Changed to bad:    16817838.
 Bad:           146122.    16963960.
 
-2018-11-02 13:19:45,262 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
+2018-11-14 04:00:16,715 [MainThread  ] [INFO ]  uvsplit vis=data9.uv options=mosaic
 
 uvsplit: Revision 1.18, 2016/05/09 03:06:18 UTC
 
@@ -974,7 +974,7 @@ Creating 1934-638.9500
 Creating 2312-319.9500
 Creating c.9500
 
-2018-11-02 13:19:57,738 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+2018-11-14 04:00:29,494 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -985,7 +985,7 @@ Counts of correlations within selected channels:
  Bad:        1426520    2263562    Changed to good:         0
  24.2% of the data is now flagged
 
-2018-11-02 13:20:09,245 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+2018-11-14 04:00:40,061 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -996,7 +996,7 @@ Counts of correlations within selected channels:
  Bad:        2263562    2500568    Changed to good:         0
  26.8% of the data is now flagged
 
-2018-11-02 13:20:23,560 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-11-14 04:00:50,983 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1007,7 +1007,7 @@ Counts of correlations within selected channels:
  Bad:        2500568    2817054    Changed to good:         0
  30.2% of the data is now flagged
 
-2018-11-02 13:22:01,897 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+2018-11-14 04:02:18,426 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
 MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
 Selecting parallel-hand polarisations
 Reading the data ...
@@ -1039,7 +1039,7 @@ Iter=15, Solution Error:  0.001
 Iter=16, Solution Error:  0.001
 Saving solution ...
 
-2018-11-02 13:22:03,108 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+2018-11-14 04:02:19,259 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1235,7 +1235,7 @@ Leakage terms:
  Ant 5:Dx,Dy = (-0.06292,-0.05802),( 0.07130,-0.09717)
  Ant 6:Dx,Dy = (-0.06138,-0.06830),( 0.07755,-0.05415)
 
-2018-11-02 13:22:27,123 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
+2018-11-14 04:02:37,434 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1249,7 +1249,7 @@ Counts of correlations within selected channels:
  Bad:        2817054    3504788    Changed to good:         0
  37.5% of the data is now flagged
 
-2018-11-02 13:22:45,333 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
+2018-11-14 04:02:53,558 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1263,7 +1263,7 @@ Counts of correlations within selected channels:
  Bad:        3504788    3897658    Changed to good:         0
  41.7% of the data is now flagged
 
-2018-11-02 13:23:08,501 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
+2018-11-14 04:03:08,884 [MainThread  ] [INFO ]  pgflag vis=1934-638.9500 command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp
 
 pgflag: Revision 1.30, 2016/10/05 23:06:50 UTC
 
@@ -1277,7 +1277,7 @@ Counts of correlations within selected channels:
  Bad:        3897658    4156250    Changed to good:         0
  44.5% of the data is now flagged
 
-2018-11-02 13:24:47,988 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
+2018-11-14 04:04:29,461 [MainThread  ] [INFO ]  mfcal vis=1934-638.9500 refant=4 interval=0.1
 MfCal: $Revision: 1.20 $, $Date: 2017/05/08 02:31:10 $
 Selecting parallel-hand polarisations
 Reading the data ...
@@ -1311,7 +1311,7 @@ Iter=17, Solution Error:  0.001
 Iter=18, Solution Error:  0.001
 Saving solution ...
 
-2018-11-02 13:24:55,213 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
+2018-11-14 04:04:30,448 [MainThread  ] [INFO ]  gpcal vis=1934-638.9500 refant=4 interval=0.1 nfbin=2 options=xyvary
 
 gpcal: Revision 1.22, 2016/05/01 22:31:05 UTC
 
@@ -1493,7 +1493,7 @@ Leakage terms:
  Ant 5:Dx,Dy = ( 0.00310,-0.00677),(-0.00211,-0.00624)
  Ant 6:Dx,Dy = ( 0.00206,-0.00597),(-0.00536,-0.00328)
 
-2018-11-02 13:25:05,237 [MainThread  ] [INFO ]  gpcopy vis=1934-638.9500 out=2312-319.9500
+2018-11-14 04:04:30,498 [MainThread  ] [INFO ]  gpcopy vis=1934-638.9500 out=2312-319.9500
 
 gpcopy: Revision 1.13, 2015/10/29 01:31:39 UTC
 

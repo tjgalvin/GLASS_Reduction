@@ -73,7 +73,12 @@ logger.log(logging.INFO, gpcal)
 gpcopy = m(f"gpcopy vis={primary} out={secondary}").run()
 logger.log(logging.INFO, gpcopy)
 
-mu.calibrator_pgflag(secondary)
+# very odd calibration table issue (suspected at least). Trying
+# to do anything with the secondary gives issue about no data select. 
+# Using options=nocal makes things work. At this point only
+# calibration table present is what has been copied from 1934-638.
+# Try gpcal before flagging to fix?
+# mu.calibrator_pgflag(secondary)
 
 gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)
