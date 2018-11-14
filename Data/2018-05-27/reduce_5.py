@@ -1,4 +1,4 @@
-"""Script to reduce 9.5GHz data from GLASS
+"""Script to reduce 5.5GHz data from GLASS
 """
 import mir_utils as mu
 from pymir import mirstr as m
@@ -12,7 +12,7 @@ logging.basicConfig(
     format="%(asctime)s [%(threadName)-12.12s] [%(levelname)-5.5s]  %(message)s",
     level=logging.INFO,
     handlers=[
-        logging.FileHandler("calibration_if2_9500.log", mode='w'),
+        logging.FileHandler("calibration_if1_5500.log", mode='w'),
         logging.StreamHandler()
     ])
 
@@ -23,28 +23,24 @@ def run(a):
     # logger.log(logging.INFO, a)
 
 NFBIN = 2
-FREQ = 9500
+FREQ = 5500
 
 # Load in files assuming the setup file/s have been renamed or deleted
-# Can lead to problems with 0 and 9s. 
 files = glob('raw/*C3132')
 
 # Example loading in files assuming first is setup
 # files = glob('raw/*C3132').pop(0)
 
 # Glob order is not the same as sort order
+# Can lead to problems with 0 and 9s. 
 files = sorted(files)
 
 # Load in data. Remember to set ifsel appropriately
-atlod = m(f"atlod in={','.join(files)} out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr").run()
+atlod = m(f"atlod in={','.join(files)} out=data5.uv ifsel=1 options=birdie,rfiflag,noauto,xycorr").run()
 logger.log(logging.INFO, atlod)
 
 # Flag out known bad channels
-mu.uvflag(atlod.out, mu.flags_9)
-
-# Flag out block going down
-uvflag = m(f"uvflag vis={atlod.out} select=time(21:32:00,21:54:00) flagval=flag").run()
-logger.log(logging.INFO, uvflag)
+mu.uvflag(atlod.out, mu.flags_5)
 
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
@@ -72,9 +68,7 @@ logger.log(logging.INFO, gpcal)
 gpcopy = m(f"gpcopy vis={primary} out={secondary}").run()
 logger.log(logging.INFO, gpcopy)
 
-# Seems to never terminate pgflagging. Seeing if an initial attempt
-# to calibrate could help
-# mu.calibrator_pgflag(secondary)
+mu.calibrator_pgflag(secondary)
 
 gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)
@@ -102,6 +96,7 @@ pool.close()
 pool.join()
 
 for mosaic in mosaic_targets:
+
     gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
     logger.log(logging.INFO, gpcopy)
 
@@ -112,3 +107,5 @@ for mosaic in mosaic_targets:
 
 # Move items into a consistent structure
 mu.mv_uv(FREQ)
+
+

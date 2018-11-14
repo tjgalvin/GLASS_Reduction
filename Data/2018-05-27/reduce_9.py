@@ -42,10 +42,6 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_9)
 
-# Flag out block going down
-uvflag = m(f"uvflag vis={atlod.out} select=time(21:32:00,21:54:00) flagval=flag").run()
-logger.log(logging.INFO, uvflag)
-
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
@@ -72,9 +68,7 @@ logger.log(logging.INFO, gpcal)
 gpcopy = m(f"gpcopy vis={primary} out={secondary}").run()
 logger.log(logging.INFO, gpcopy)
 
-# Seems to never terminate pgflagging. Seeing if an initial attempt
-# to calibrate could help
-# mu.calibrator_pgflag(secondary)
+mu.calibrator_pgflag(secondary)
 
 gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)
