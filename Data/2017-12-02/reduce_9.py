@@ -42,6 +42,10 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_9)
 
+# Flag out bad time due to a thunderstorm
+uvflag = m(f"uvflag vis={atlod.out} select='time(17DEC02:03:21:57.5,17DEC02:03:35:00.0)' flagval=flag").run()
+logger.log(logging.INFO, uvflag)
+
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
