@@ -64,10 +64,12 @@ def uvflag(vis, flag_def):
         proc = mirstr(f"uvflag vis={vis} line={line} flagval=flag").run()
         logger.log(logging.INFO, proc)
 
-
-def calibrator_pgflag(src):
+def old_calibrator_pgflag(src):
     """A series of pgflag steps common to most (if not all) of
-    the primary and secondary miriad uv files
+    the primary and secondary miriad uv files.
+
+    This was the original implementation before adjusting to follow
+    Minhs original procedure
     
     Arguments:
         src {str} -- The filename of the data to flag
@@ -83,8 +85,64 @@ def calibrator_pgflag(src):
     logger.log(logging.INFO, pgflag)
 
 
-def mosaic_pgflag(src):
-    """The name of the C3171 mosaic file to flag
+def minh_calibrator_pgflag(src):
+    """A series of pgflag steps common to most (if not all) of
+    the primary and secondary miriad uv files.
+
+    This is following the flagging outlined in Do_Flag.csh` on the
+    ATCAGAMA wiki
+    
+    Arguments:
+        src {str} -- The filename of the data to flag
+    """
+    primary = True if '1934-638' in src else False
+
+    if primary:
+        pgflag = m(f"pgflag vis={src} stokes=v flagpar=15,3,3,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=q flagpar=15,3,3,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=u flagpar=15,3,3,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=i flagpar=15,3,3,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+    
+    else:
+        pgflag = m(f"pgflag vis={src} stokes=i,q,u,v flagpar=10,1,1,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=i,u flagpar=10,1,1,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=i,q flagpar=10,1,1,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)
+        
+        pgflag = m(f"pgflag vis={src} stokes=i flagpar=10,1,1,3,5,3 command='<' options=nodisp").run()
+        logger.log(logging.INFO, pgflag)  
+
+
+def calibrator_pgflag(src, old=False):
+    """A series of pgflag steps common to most (if not all) of
+    the primary and secondary miriad uv files
+    
+    Arguments:
+        src {str} -- The filename of the data to flag
+    
+    Keyword Arguments:
+        old {bool} -- Activate the original style of flagging
+    """
+    if old is False:
+        old_calibrator_pgflag(src)
+
+    else:
+        minh_calibrator_pgflag(src)
+
+
+def old_mosaic_pgflag(src):
+    """The name of the mosaic file to flag
     
     Arguments:
         src {str} -- Name of the file to flag
@@ -97,6 +155,64 @@ def mosaic_pgflag(src):
                f"options=nodisp").run()
     logger.log(logging.INFO, pgflag)
 
+
+def minh_mosaic_flag(src):
+    """Thw flagging procedure applied to the source data. THis follows Minh's script
+    called Do_Flag.csh on the ATCAGAMA wiki. For ease it is applied before uvsplit. 
+    Time convolution is turned off for the moment. 
+    
+    Arguments:
+        src {[type]} -- [description]
+    """
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q,u,v flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q,u,v flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,u flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,u flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+
+def mosaic_pgflag(src, old=False):
+    """The name of the mosaic file to flag
+    
+    Arguments:
+        src {str} -- Name of the file to flag
+
+    Keyword Arguments:
+        old {bool} -- Activate the original style of flagging
+    """
+
+    if old if False:
+        old_mosaic_pgflag(src)
+    
+    else:
+        minh_mosaic_flag(src)
+        
 
 # -----------------------------------------------------------------------------
 
@@ -160,12 +276,15 @@ def derive_obs_sources(uvsplit, freq):
 # Multiband move operation
 # -----------------------------------------------------------------------------
 
-def mv_uv(freq:str):
+def mv_uv(freq:str, old=False):
     """Helper function to move uv files into directories consistently among days
     
     Arguments:
         freq {str} -- The frequency of the pipeline
+
+    Keyword Arguments {bool} -- If old, retain the original folder scheme 
     """
+    suffix = '_minh' if old is False else ''
     if not isinstance(freq, str):
         freq = str(freq)
 
@@ -180,28 +299,28 @@ def mv_uv(freq:str):
         su.move(f, 'Plots')
 
 
-    if not os.path.exists(f'f{freq}'):
+    if not os.path.exists(f'f{freq}{suffix}'):
         # Potential race conditions
         try:
-            os.makedirs(f'f{freq}')
+            os.makedirs(f'f{freq}{suffix}')
         except:
             pass
         
     for f in glob(f'*.{freq}'):
-        su.move(f, f'f{freq}')
+        su.move(f, f'f{freq}{suffix}')
 
 
-    if not os.path.exists('uv'):
+    if not os.path.exists(f'uv{suffix}'):
         # Potential race conditions
         try:
-            os.makedirs('uv')
+            os.makedirs(f'uv{suffix}')
         except:
             pass
 
     if freq == '5500':
-        su.move('data5.uv', 'uv')
+        su.move('data5.uv', f'uv{suffix}')
     elif freq == '9500':
-        su.move('data9.uv', 'uv')
+        su.move('data9.uv', f'uv{suffix}')
 
 # -----------------------------------------------------------------------------
 
