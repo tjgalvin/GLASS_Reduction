@@ -22,7 +22,7 @@ def run(a):
     a.run()
     # logger.log(logging.INFO, a)
 
-NFBIN = 2
+NFBIN = 4
 FREQ = 9500
 
 # Load in files assuming the setup file/s have been renamed or deleted

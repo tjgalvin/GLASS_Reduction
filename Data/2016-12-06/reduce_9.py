@@ -22,7 +22,7 @@ def run(a):
     a.run()
     # logger.log(logging.INFO, a)
 
-NFBIN = 2
+NFBIN = 4
 FREQ = 9500
 
 primary = f'1934-638.{FREQ}'
