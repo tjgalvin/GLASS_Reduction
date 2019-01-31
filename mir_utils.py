@@ -207,7 +207,7 @@ def mosaic_pgflag(src, old=False):
         old {bool} -- Activate the original style of flagging
     """
 
-    if old if False:
+    if old is False:
         old_mosaic_pgflag(src)
     
     else:
