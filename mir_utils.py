@@ -134,7 +134,7 @@ def calibrator_pgflag(src, old=False):
     Keyword Arguments:
         old {bool} -- Activate the original style of flagging
     """
-    if old is False:
+    if old is True:
         old_calibrator_pgflag(src)
 
     else:
@@ -207,7 +207,7 @@ def mosaic_pgflag(src, old=False):
         old {bool} -- Activate the original style of flagging
     """
 
-    if old is False:
+    if old is True:
         old_mosaic_pgflag(src)
     
     else:
@@ -284,7 +284,7 @@ def mv_uv(freq:str, old=False):
 
     Keyword Arguments {bool} -- If old, retain the original folder scheme 
     """
-    suffix = '_minh' if old is False else ''
+    suffix = '' if old is True else '_minh'
     if not isinstance(freq, str):
         freq = str(freq)
 
