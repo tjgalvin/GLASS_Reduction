@@ -99,6 +99,8 @@ for mosaic in mosaic_targets:
 
         mu.mosaic_src_pgflag(src)
 
+        mu.mosaic_src_plots(src)
+
     mu.mv_srcs(srcs, FREQ)
     mu.mv_mosaic(mosaic)
 

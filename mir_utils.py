@@ -233,6 +233,16 @@ def calibration_plots(primary: str, secondary: str, freq: str):
     pool.close()
     pool.join()
 
+
+def mosaic_src_plots(src: str):
+    """Common function to create plots for the sources
+    
+    Arguments:
+        src {str} -- src to plots
+    """
+    return
+
+
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
