@@ -352,7 +352,6 @@ def mv_mosaic(mosaic: str):
         mosaic {str} -- Mosaic file to move
         freq {str} -- Frequency of the file
     """
-    freq = str(freq)
     folder = f"uv_mosaic"
 
     make_dir(folder)
