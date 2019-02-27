@@ -374,7 +374,7 @@ def mv_data(data: str):
     Arguments:
         data {str} -- The data file from atlod
     """
-    folder = f"data_uv"
+    folder = f"uv_data"
 
     make_dir(folder)
     su.move(data, folder)

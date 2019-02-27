@@ -105,5 +105,5 @@ for mosaic in mosaic_targets:
 
 
 mu.mv_calibrators(primary, secondary)
-mu.mv_calibrators(atlod.out, FREQ)
+mu.mv_data(atlod.out)
 mu.mv_plots(FREQ)
