@@ -404,7 +404,7 @@ def mv_plots(freq: str):
     make_dir(folder)
 
     for f in glob(f'*{freq}.png') + glob(f'*{freq}_log.txt'):
-        su.move(f, 'Plots')
+        su.move(f, folder)
 
 
 def mv_uv(freq:str, old=False):
