@@ -207,6 +207,8 @@ def mosaic_src_calibration(src: str):
 # -----------------------------------------------------------------------------
 # Common plotting utilities
 # -----------------------------------------------------------------------------
+def run(a):
+    a.run()
 
 def calibration_plots(primary: str, secondary: str, freq: str):
     """Common function to create calibration plots of the primary and
@@ -227,7 +229,7 @@ def calibration_plots(primary: str, secondary: str, freq: str):
             m(f'uvplt vis={secondary} axis=FREQ,amp options=nob,nof stokes=i device=secondary_freqamp_{freq}.png/PNG'),
             m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{freq}_log.txt device=secondary_uvfmeas_{freq}.png/PNG')]
     pool = Pool(7)
-    result = pool.map(lambda x: x.run(), plt)
+    result = pool.map(run, plt)
     pool.close()
     pool.join()
 
