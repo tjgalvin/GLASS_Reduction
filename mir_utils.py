@@ -4,6 +4,7 @@ from glob import glob
 import subprocess as sp
 import pymir as pymir
 from pymir import mirstr as m
+from multiprocessing import Pool
 import os
 import sys
 import shutil as su
@@ -64,28 +65,8 @@ def uvflag(vis, flag_def):
         proc = mirstr(f"uvflag vis={vis} line={line} flagval=flag").run()
         logger.log(logging.INFO, proc)
 
-def old_calibrator_pgflag(src):
-    """A series of pgflag steps common to most (if not all) of
-    the primary and secondary miriad uv files.
 
-    This was the original implementation before adjusting to follow
-    Minhs original procedure
-    
-    Arguments:
-        src {str} -- The filename of the data to flag
-    """
-    # Automated flagging
-    pgflag = m(f"pgflag vis={src} command='<b' stokes=i,q,u,v flagpar=8,5,5,3,6,3 options=nodisp").run()
-    logger.log(logging.INFO, pgflag)
-
-    pgflag = m(f"pgflag vis={src} command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  options=nodisp").run()
-    logger.log(logging.INFO, pgflag)
-
-    pgflag = m(f"pgflag vis={src} command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  options=nodisp").run()
-    logger.log(logging.INFO, pgflag)
-
-
-def minh_calibrator_pgflag(src):
+def calibrator_pgflag(src):
     """A series of pgflag steps common to most (if not all) of
     the primary and secondary miriad uv files.
 
@@ -124,39 +105,48 @@ def minh_calibrator_pgflag(src):
         logger.log(logging.INFO, pgflag)  
 
 
-def calibrator_pgflag(src, old=False):
-    """A series of pgflag steps common to most (if not all) of
-    the primary and secondary miriad uv files
+def mosaic_pgflag(src):
+    """Thw flagging procedure applied to the source data. THis follows Minh's script
+    called Do_Flag.csh on the ATCAGAMA wiki. For ease it is applied before uvsplit. 
+    Time convolution is turned off for the moment. 
     
     Arguments:
-        src {str} -- The filename of the data to flag
-    
-    Keyword Arguments:
-        old {bool} -- Activate the original style of flagging
+        src {[type]} -- [description]
     """
-    if old is True:
-        old_calibrator_pgflag(src)
-
-    else:
-        minh_calibrator_pgflag(src)
-
-
-def old_mosaic_pgflag(src):
-    """The name of the mosaic file to flag
-    
-    Arguments:
-        src {str} -- Name of the file to flag
-    """
-    pgflag = m(f"pgflag vis={src} command='<b' stokes=i,v,q,u flagpar=8,2,2,3,6,3  "\
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q,u,v flagpar=10,1,0,3,5,3  "\
                f"options=nodisp").run()
     logger.log(logging.INFO, pgflag)
 
-    pgflag = m(f"pgflag vis={src} command='<b' stokes=i,v,u,q flagpar=8,2,2,3,6,3  "\
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q,u,v flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q flagpar=10,1,0,3,5,3  "\
                f"options=nodisp").run()
     logger.log(logging.INFO, pgflag)
 
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,q flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
 
-def minh_mosaic_flag(src):
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,u flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i,u flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag)
+
+    pgflag = m(f"pgflag vis={src} command='<' stokes=i flagpar=10,1,0,3,5,3  "\
+               f"options=nodisp").run()
+    logger.log(logging.INFO, pgflag) 
+    
+
+def mosaic_src_pgflag(src):
     """Thw flagging procedure applied to the source data. THis follows Minh's script
     called Do_Flag.csh on the ATCAGAMA wiki. For ease it is applied before uvsplit. 
     Time convolution is turned off for the moment. 
@@ -197,28 +187,73 @@ def minh_mosaic_flag(src):
     logger.log(logging.INFO, pgflag) 
 
 
-def mosaic_pgflag(src, old=False):
-    """The name of the mosaic file to flag
+# -----------------------------------------------------------------------------
+
+# -----------------------------------------------------------------------------
+# Common calibration utilities
+# -----------------------------------------------------------------------------
+def mosaic_src_calibration(src: str):
+    """Apply any common calibration steps for each source file
     
     Arguments:
-        src {str} -- Name of the file to flag
-
-    Keyword Arguments:
-        old {bool} -- Activate the original style of flagging
+        src {str} -- uv source file of item to process
     """
+    gpaver = m(f"gpaver vis={src} interval=5 options=scalar").run()
+    logger.log(logging.INFO, gpaver)
 
-    if old is True:
-        old_mosaic_pgflag(src)
+# -----------------------------------------------------------------------------
+
+
+# -----------------------------------------------------------------------------
+# Common plotting utilities
+# -----------------------------------------------------------------------------
+
+def calibration_plots(primary: str, secondary: str, freq: str):
+    """Common function to create calibration plots of the primary and
+    secondary visibility files
     
-    else:
-        minh_mosaic_flag(src)
-        
+    Arguments:
+        primary {str} -- Filename of primary calibrator
+        secondary {str} -- Filename of the secondary calibrator
+        freq {str} -- Frequency of the IF
+    """
+    plt = [m(f'uvplt vis={primary} axis=time,amp options=nob,nof stokes=i device=primary_timeamp_{freq}.png/PNG'),
+            m(f'uvplt vis={primary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=primary_reim_{freq}.png/PNG'),
+            m(f'uvplt vis={primary} axis=uc,vc options=nob,nof stokes=i  device=primary_ucvc_{freq}.png/PNG'),
+            m(f'uvplt vis={primary} axis=FREQ,amp options=nob,nof stokes=i  device=primary_freqamp_{freq}.png/PNG'),
+            m(f'uvplt vis={secondary} axis=time,amp options=nob,nof stokes=i device=secondary_timeamp_{freq}.png/PNG'),
+            m(f'uvplt vis={secondary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=secondary_reim_{freq}.png/PNG'),
+            m(f'uvplt vis={secondary} axis=uc,vc options=nob,nof stokes=i  device=secondary_ucvc_{freq}.png/PNG'),
+            m(f'uvplt vis={secondary} axis=FREQ,amp options=nob,nof stokes=i device=secondary_freqamp_{freq}.png/PNG'),
+            m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{FREQ}_log.txt device=secondary_uvfmeas_{freq}.png/PNG')]
+    pool = Pool(7)
+    result = pool.map(lambda x: x.run(), plt)
+    pool.close()
+    pool.join()
 
 # -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
 # Source book keeping operations
 # -----------------------------------------------------------------------------
+
+def mosaic_uvsplit(mosaic: str):
+    """uvsplit a mosaic source file up based on source names. Will return
+    a list of new source files to operate upon. 
+    
+    Arguments:
+        mosaic {str} -- Name of the mosaic file to split
+    """
+    uvsplit = m(f"uvsplit vis={mosaic}").run()
+    logger.log(logging.INFO, uvsplit)
+
+    srcs = []
+    for line in str(uvsplit).splitlines():
+        if 'Creating' not in line:
+            continue
+        srcs.append(line.split()[1])
+
+    return srcs
 
 def derive_obs_sources(uvsplit, freq):
     """Return the objects that were observed in an observation, including
@@ -275,6 +310,90 @@ def derive_obs_sources(uvsplit, freq):
 # -----------------------------------------------------------------------------
 # Multiband move operation
 # -----------------------------------------------------------------------------
+
+def make_dir(directory: str):
+    """Make up a directory
+    
+    Arguments:
+        dir {str} -- make up a directory
+    """
+    if not os.path.exists(directory):
+        # Potential race conditions between checking and creating
+        try:
+            os.makedirs(directory)
+        except:
+            pass
+
+def mv_srcs(srcs: list, freq: str):
+    """Move sources into a consistent directory structure
+
+    Arguments:
+        srcs {list} -- List of source files to move into place
+        freq {str} -- Frequency of data
+    """
+    if not isinstance(srcs, list):
+        srcs = [srcs,]
+
+    freq = str(freq)
+    folder = f"f{freq}_sources"
+    
+    make_dir(folder)
+    for src in srcs:
+        su.move(src, folder)
+
+
+def mv_mosaic(mosaic: str):
+    """Move a mosaic file into a folder
+    
+    Arguments:
+        mosaic {str} -- Mosaic file to move
+        freq {str} -- Frequency of the file
+    """
+    freq = str(freq)
+    folder = f"uv_mosaic"
+
+    make_dir(folder)
+    su.move(mosaic, folder)
+
+
+def mv_data(data: str):
+    """Move the data uv file from atlod into place
+    
+    Arguments:
+        data {str} -- The data file from atlod
+    """
+    folder = f"data_uv"
+
+    make_dir(folder)
+    su.move(data, folder)
+
+
+def mv_calibrators(primary: str, secondary: str):
+    """Move the calibrators into place
+    
+    Arguments:
+        primary {str} -- Name of the primary calibrator
+        secpmdary {str} -- Name of the secondary calibrator
+    """
+    folder = "uv_calibrators"
+
+    make_dir(folder)
+    su.move(primary, folder)
+    su.move(secondary, folder)
+
+
+def mv_plots(freq: str):
+    """Move the plots from the scripts into place
+    
+    Arguments:
+        freq {str} -- Frequency of the plots to move
+    """
+    folder = 'Cal_Plots'
+    make_dir(folder)
+
+    for f in glob(f'*{freq}.png') + glob(f'*{freq}_log.txt'):
+        su.move(f, 'Plots')
+
 
 def mv_uv(freq:str, old=False):
     """Helper function to move uv files into directories consistently among days
