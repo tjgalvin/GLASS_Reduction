@@ -225,7 +225,7 @@ def calibration_plots(primary: str, secondary: str, freq: str):
             m(f'uvplt vis={secondary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=secondary_reim_{freq}.png/PNG'),
             m(f'uvplt vis={secondary} axis=uc,vc options=nob,nof stokes=i  device=secondary_ucvc_{freq}.png/PNG'),
             m(f'uvplt vis={secondary} axis=FREQ,amp options=nob,nof stokes=i device=secondary_freqamp_{freq}.png/PNG'),
-            m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{FREQ}_log.txt device=secondary_uvfmeas_{freq}.png/PNG')]
+            m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{freq}_log.txt device=secondary_uvfmeas_{freq}.png/PNG')]
     pool = Pool(7)
     result = pool.map(lambda x: x.run(), plt)
     pool.close()
@@ -323,6 +323,7 @@ def make_dir(directory: str):
             os.makedirs(directory)
         except:
             pass
+
 
 def mv_srcs(srcs: list, freq: str):
     """Move sources into a consistent directory structure
