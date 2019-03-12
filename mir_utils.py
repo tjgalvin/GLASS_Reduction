@@ -18,10 +18,6 @@ logger = logging.getLogger()
 mirstr = pymir.mirstr
 
 primary = '1934-638'
-secondary = '0327-241'
-
-# flags_5 = {'chan_start':[None],
-#            'chan_end'  :[None]}
 
 ref_5 = 4476
 flags_5 = {'chan_start':[5622-ref_5, 5930-ref_5, 6440-ref_5],
@@ -45,10 +41,28 @@ frequencyFlagging = {
 # Flagging utilities
 # -----------------------------------------------------------------------------
 
+def uvflag_flie(vis):
+    """Search for a file containing uvflag defs to execute. File is assumed to be 
+    new line delimited with a valid select statement each line of data to
+    flag
+    
+    Arguments:
+        vis {str} -- Visibility file to flag
+    """
+    flag_file = 'flag_select_5500.dat' if '5500' in vis else 'flag_select_9500.dat'
+
+    if not os.path.exists(flag_file):
+        logger.log(logging.INFO, "No flag def file found. ")
+        return
+
+    with open(flag_file, 'r') as infile:
+        for line in infile.read().splitlines():
+            uvflag = mirstr(f"uvflag vis={vis} select={line} flagval=flag").run()
+            logger.log(logging.INFO, uvflag)
+
+
 def uvflag(vis, flag_def):
     """Flag the known bad channels from a visibility dataset.
-
-    Stub function for the moment until channel ranges are made up
     
     Arguments:
         vis {str} -- Name of the visibility data to flag
@@ -56,7 +70,13 @@ def uvflag(vis, flag_def):
     
     Raises:
         ValueError -- Raised if the `chan_start` and `chan_end` do not have same length
+    
+    Raises:
+        ValueError -- [description]
     """
+    # Perform any flagging in the appropriate def file
+    uvflag_flie(vis)
+
     if len(flag_def['chan_start']) != len(flag_def['chan_end']):
         raise ValueError('Channels start and end should have the same length')
         
