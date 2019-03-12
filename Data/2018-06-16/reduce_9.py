@@ -42,12 +42,6 @@ logger.log(logging.INFO, atlod)
 # Flag out known bad channels
 mu.uvflag(atlod.out, mu.flags_9)
 
-# Number of hardware issues reported in logs. Observer suggests this
-# time range
-uvflag = m(f"uvflag vis={atlod.out} select=time(14:11:00,15:16:00) flagval=flag").run()
-logger.log(logging.INFO, uvflag)
-
-
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
 
@@ -74,12 +68,7 @@ logger.log(logging.INFO, gpcal)
 gpcopy = m(f"gpcopy vis={primary} out={secondary}").run()
 logger.log(logging.INFO, gpcopy)
 
-# very odd calibration table issue (suspected at least). Trying
-# to do anything with the secondary gives issue about no data select. 
-# Using options=nocal makes things work. At this point only
-# calibration table present is what has been copied from 1934-638.
-# Try gpcal before flagging to fix?
-# mu.calibrator_pgflag(secondary)
+mu.calibrator_pgflag(secondary)
 
 gpcal = m(f"gpcal vis={secondary} refant=4 interval=0.1 nfbin={NFBIN} options=xyvary,qusolve").run()
 logger.log(logging.INFO, gpcal)
@@ -92,28 +81,29 @@ logger.log(logging.INFO, gpcal)
 gpboot = m(f"gpboot vis={secondary} cal={primary}").run()
 logger.log(logging.INFO, gpboot)
 
-plt = [m(f'uvplt vis={primary} axis=time,amp options=nob,nof stokes=i device=primary_timeamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=primary_reim_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=uc,vc options=nob,nof stokes=i  device=primary_ucvc_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=FREQ,amp options=nob,nof stokes=i  device=primary_freqamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=time,amp options=nob,nof stokes=i device=secondary_timeamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=secondary_reim_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=uc,vc options=nob,nof stokes=i  device=secondary_ucvc_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=FREQ,amp options=nob,nof stokes=i device=secondary_freqamp_{FREQ}.png/PNG'),
-        m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{FREQ}_log.txt device=secondary_uvfmeas_{FREQ}.png/PNG')]
-pool = Pool(7)
-result = pool.map(run, plt)
-pool.close()
-pool.join()
+mfboot = m(f"mfboot vis={primary},{secondary} select=source(1934-638) device=mfboot_{FREQ}.png/png").run()
+logger.log(logging.INFO, mfboot)
+
+mu.calibration_plots(primary, secondary, FREQ)
+
 
 for mosaic in mosaic_targets:
+
     gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
     logger.log(logging.INFO, gpcopy)
 
-    mu.mosaic_pgflag(mosaic)
+    srcs = mu.mosaic_uvsplit(mosaic)
 
-    uvsplit = m(f"uvsplit vis={mosaic}").run()
-    logger.log(logging.INFO, uvsplit)
+    for src in srcs:
+        mu.mosaic_src_calibration(src)
 
-# Move items into a consistent structure
-mu.mv_uv(FREQ)
+        mu.mosaic_src_pgflag(src)
+
+        mu.mosaic_src_plots(src)
+
+    mu.mv_srcs(srcs, FREQ)
+    mu.mv_mosaic(mosaic)
+
+mu.mv_calibrators(primary, secondary)
+mu.mv_data(atlod.out)
+mu.mv_plots(FREQ)

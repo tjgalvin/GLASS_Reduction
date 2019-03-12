@@ -25,15 +25,15 @@ def run(a):
 NFBIN = 4
 FREQ = 9500
 
-primary = f'1934-638.{FREQ}'
-secondary = f'2312-319.{FREQ}'
-mosaic = f"d.{FREQ}"
-
 # Load in files assuming the setup file/s have been renamed or deleted
+# Can lead to problems with 0 and 9s. 
 files = glob('raw/*C3132')
 
 # Example loading in files assuming first is setup
 # files = glob('raw/*C3132').pop(0)
+
+# Glob order is not the same as sort order
+files = sorted(files)
 
 # Load in data. Remember to set ifsel appropriately
 atlod = m(f"atlod in={','.join(files)} out=data9.uv ifsel=2 options=birdie,rfiflag,noauto,xycorr").run()
@@ -44,6 +44,10 @@ mu.uvflag(atlod.out, mu.flags_9)
 
 uvsplit = m(f"uvsplit vis={atlod.out} options=mosaic").run()
 logger.log(logging.INFO, uvsplit)
+
+# Deduce the objects in the observing run
+srcs = mu.derive_obs_sources(uvsplit, FREQ)
+primary, secondary, mosaic_targets = srcs
 
 mu.calibrator_pgflag(primary)
 
@@ -77,62 +81,29 @@ logger.log(logging.INFO, gpcal)
 gpboot = m(f"gpboot vis={secondary} cal={primary}").run()
 logger.log(logging.INFO, gpboot)
 
-plt = [m(f'uvplt vis={primary} axis=time,amp options=nob,nof stokes=i device=primary_timeamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=primary_reim_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=uc,vc options=nob,nof stokes=i  device=primary_ucvc_{FREQ}.png/PNG'),
-        m(f'uvplt vis={primary} axis=FREQ,amp options=nob,nof stokes=i  device=primary_freqamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=time,amp options=nob,nof stokes=i device=secondary_timeamp_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=re,im options=nob,nof,eq stokes=i,q,u,v device=secondary_reim_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=uc,vc options=nob,nof stokes=i  device=secondary_ucvc_{FREQ}.png/PNG'),
-        m(f'uvplt vis={secondary} axis=FREQ,amp options=nob,nof stokes=i device=secondary_freqamp_{FREQ}.png/PNG'),
-        m(f'uvfmeas vis={secondary} stokes=i log=secondary_uvfmeas_{FREQ}_log.txt device=secondary_uvfmeas_{FREQ}.png/PNG')]
-pool = Pool(7)
-result = pool.map(run, plt)
-pool.close()
-pool.join()
+mfboot = m(f"mfboot vis={primary},{secondary} select=source(1934-638) device=mfboot_{FREQ}.png/png").run()
+logger.log(logging.INFO, mfboot)
 
-gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
-logger.log(logging.INFO, gpcopy)
-
-mu.mosaic_pgflag(mosaic)
-
-uvsplit = m(f"uvsplit vis={mosaic}").run()
-logger.log(logging.INFO, uvsplit)
+mu.calibration_plots(primary, secondary, FREQ)
 
 
-# -----------------------------------------------------
-# Move items into a consistent structure
-# -----------------------------------------------------
+for mosaic in mosaic_targets:
 
-if not os.path.exists('Plots'):
-    # Potential race conditions
-    try:
-        os.makedirs('Plots')
-    except:
-        pass
-    
-for f in glob(f'*{FREQ}.png') + glob(f'*{FREQ}_log.txt'):
-    su.move(f, 'Plots')
+    gpcopy = m(f"gpcopy vis={secondary} out={mosaic}").run()
+    logger.log(logging.INFO, gpcopy)
 
+    srcs = mu.mosaic_uvsplit(mosaic)
 
-if not os.path.exists(f'f{FREQ}'):
-    # Potential race conditions
-    try:
-        os.makedirs(f'f{FREQ}')
-    except:
-        pass
-    
-for f in glob(f'*.{FREQ}'):
-    su.move(f, f'f{FREQ}')
+    for src in srcs:
+        mu.mosaic_src_calibration(src)
 
+        mu.mosaic_src_pgflag(src)
 
-if not os.path.exists('uv'):
-    # Potential race conditions
-    try:
-        os.makedirs('uv')
-    except:
-        pass
+        mu.mosaic_src_plots(src)
 
-su.move('data9.uv', 'uv')
+    mu.mv_srcs(srcs, FREQ)
+    mu.mv_mosaic(mosaic)
 
-
+mu.mv_calibrators(primary, secondary)
+mu.mv_data(atlod.out)
+mu.mv_plots(FREQ)
