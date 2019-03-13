@@ -18,22 +18,22 @@ def run(s):
     secondary_srcs = ['2245-328', '2312-319', '2255-282']
     secondary = None
 
-    if not os.path.exists(f"{s}/f5500/"):
+    if not os.path.exists(f"{s}/uv_calibrators/"):
         return
 
-    srcs = os.listdir(f"{s}/f5500/")
+    srcs = os.listdir(f"{s}/uv_calibrators/")
     for src in srcs:
         src = src.replace('.5500','')
         if src in secondary_srcs:
             secondary = src
 
-    secondary_5 = f"{s}/f5500/{secondary}.5500"
-    secondary_9 = f"{s}/f9500/{secondary}.9500"
+    secondary_5 = f"{s}/uv_calibrators/{secondary}.5500"
+    secondary_9 = f"{s}/uv_calibrators/{secondary}.9500"
 
     if os.path.exists(secondary_5) and os.path.exists(secondary_9):
         uvfmeas = f"uvfmeas vis={secondary_5},{secondary_9} stokes=i "\
-                  f"device={s}/Plots/secondary_both.png/PNG "\
-                  f"log={s}/Plots/secondary_both.txt"
+                  f"device={s}/Cal_Plots/secondary_both.png/PNG "\
+                  f"log={s}/Cal_Plots/secondary_both.txt"
         print(uvfmeas)
 
         uvfmeas = mu.mirstr(uvfmeas).run()
@@ -47,7 +47,7 @@ if len(sys.argv) > 1:
 else:
     days = glob.glob('Data/201*')
 
-pool = Pool(10)
+pool = Pool(4)
 result = pool.map(run, days)
 pool.close()
 pool.join()
