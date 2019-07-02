@@ -41,7 +41,7 @@ frequencyFlagging = {
 # Flagging utilities
 # -----------------------------------------------------------------------------
 
-def uvflag_flie(vis):
+def uvflag_file(vis):
     """Search for a file containing uvflag defs to execute. File is assumed to be 
     new line delimited with a valid select statement each line of data to
     flag
@@ -57,7 +57,7 @@ def uvflag_flie(vis):
 
     with open(flag_file, 'r') as infile:
         for line in infile.read().splitlines():
-            uvflag = mirstr(f"uvflag vis={vis} select={line} flagval=flag").run()
+            uvflag = mirstr(f"uvflag vis={vis} select='{line}' flagval=flag").run()
             logger.log(logging.INFO, uvflag)
 
 
@@ -75,7 +75,7 @@ def uvflag(vis, flag_def):
         ValueError -- [description]
     """
     # Perform any flagging in the appropriate def file
-    uvflag_flie(vis)
+    uvflag_file(vis)
 
     if len(flag_def['chan_start']) != len(flag_def['chan_end']):
         raise ValueError('Channels start and end should have the same length')
@@ -128,7 +128,6 @@ def calibrator_pgflag(src):
 def mosaic_pgflag(src):
     """Thw flagging procedure applied to the source data. THis follows Minh's script
     called Do_Flag.csh on the ATCAGAMA wiki. For ease it is applied before uvsplit. 
-    Time convolution is turned off for the moment. 
     
     Arguments:
         src {[type]} -- [description]
