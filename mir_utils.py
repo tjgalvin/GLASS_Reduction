@@ -217,6 +217,7 @@ def mosaic_src_calibration(src: str):
     Arguments:
         src {str} -- uv source file of item to process
     """
+    pass
     gpaver = m(f"gpaver vis={src} interval=5 options=scalar").run()
     logger.log(logging.INFO, gpaver)
 
@@ -286,6 +287,7 @@ def mosaic_uvsplit(mosaic: str):
 
     return srcs
 
+
 def derive_obs_sources(uvsplit, freq):
     """Return the objects that were observed in an observation, including
     the primary calibrator (almost certainly 1934-638), the secondary,
@@ -299,7 +301,7 @@ def derive_obs_sources(uvsplit, freq):
     primary_srcs = ['1934-638']
     secondary_srcs = ['2245-328', '2312-319', '2255-282']
     target_srcs = ['a','b','c','d','e','f']
-    ignore_srcs = ['2333-528','0823-500','0537-441','1921-293']
+    ignore_srcs = ['2333-528','0823-500','0537-441','1921-293', '2244-372']
 
     freq = f"{freq}"
 
